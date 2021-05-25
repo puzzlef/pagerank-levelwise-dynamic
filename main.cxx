@@ -1,30 +1,63 @@
 #include <cmath>
+#include <string>
+#include <sstream>
 #include <cstdio>
 #include <iostream>
+#include <utility>
 #include "src/main.hxx"
 
 using namespace std;
 
 
 
+template <class G, class H, class T>
+auto runPagerankCall(const char *name, const G& x, const H& xt, const vector<T> *init, const vector<T> *ranks=nullptr) {
+  int repeat = name? 5:1;
+  auto a = pagerankLevelwise(x, xt, init, {repeat});
+  auto e = absError(a.ranks, ranks? *ranks : a.ranks);
+  if (name) { print(xt); printf(" [%09.3f ms; %03d iters.] [%.4e err.] %s\n", a.time, a.iterations, e, name); }
+  return a;
+}
 
-template <class G, class H>
-void runPagerank(const G& x, const H& xt, bool show) {
-  int repeat = 5;
-  vector<float> *init = nullptr;
 
-  // Find pagerank using a single thread.
-  auto a1 = pagerankMonolithic(xt, init, {repeat});
-  auto e1 = absError(a1.ranks, a1.ranks);
-  printf("[%09.3f ms; %03d iters.] [%.4e err.] pagerankMonolithic\n", a1.time, a1.iterations, e1);
-  if (show) println(a1.ranks);
+void runPagerankBatch(const string& data, bool show, int skip, int batch) {
+  vector<float>  ranksAdj;
+  vector<float> *initStatic  = nullptr;
+  vector<float> *initDynamic = &ranksAdj;
 
-  // Find pagerank component-wise in topologically-ordered fashion (levelwise).
-  for (int C=1, i=0; C<x.order(); C*=i&1? 2:5, i++) {
-    auto a2 = pagerankLevelwise(x, xt, init, {repeat, C});
-    auto e2 = absError(a2.ranks, a1.ranks);
-    printf("[%09.3f ms; %03d iters.] [%.4e err.] pagerankLevelwise [%.0e min-component-size]\n", a2.time, a2.iterations, e2, (double) C);
-    if (show) println(a2.ranks);
+  DiGraph<> x;
+  stringstream s(data);
+  while (true) {
+    // Skip some edges (to speed up execution)
+    if (!readSnapTemporal(x, s, skip)) break;
+    auto xt = transposeWithDegree(x);
+    auto a1 = runPagerankCall(nullptr, x, xt, initStatic);
+    auto ksOld    = vertices(x);
+    auto ranksOld = move(a1.ranks);
+
+    if (!readSnapTemporal(x, s, batch)) break;
+    xt = transposeWithDegree(x);
+    auto ks = vertices(x);
+    ranksAdj.resize(x.span());
+
+    // Find static pagerank of updated graph.
+    auto a2 = runPagerankCall("pagerankStatic", x, xt, initStatic);
+
+    // Find dynamic pagerank, scaling old vertices, and using 1/N for new vertices.
+    adjustRanks(ranksAdj, ranksOld, ksOld, ks, 0.0f, float(ksOld.size())/ks.size(), 1.0f/ks.size());
+    auto a3 = runPagerankCall("pagerankDynamic", x, xt, initDynamic, &a2.ranks);
+  }
+}
+
+
+void runPagerank(const string& data, bool show) {
+  int M = countLines(data), steps = 100;
+  printf("Temporal edges: %d\n\n", M);
+  for (int batch=1, i=0; batch<M; batch*=i&1? 2:5, i++) {
+    int skip = max(M/steps - batch, 0);
+    printf("# Batch size %.0e\n", (double) batch);
+    runPagerankBatch(data, show, skip, batch);
+    printf("\n");
   }
 }
 
@@ -32,11 +65,8 @@ void runPagerank(const G& x, const H& xt, bool show) {
 int main(int argc, char **argv) {
   char *file = argv[1];
   bool  show = argc > 2;
-  printf("Loading graph %s ...\n", file);
-  auto x  = readMtx(file); println(x);
-  loopDeadEnds(x); print(x); printf(" (loopDeadEnds)\n");
-  auto xt = transposeWithDegree(x); print(xt); printf(" (transposeWithDegree)\n");
-  runPagerank(x, xt, show);
-  printf("\n");
+  printf("Using graph %s ...\n", file);
+  string d = readFile(file);
+  runPagerank(d, show);
   return 0;
 }
