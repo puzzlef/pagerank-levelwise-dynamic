@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-src="pagerank-monolithic-vs-levelwise"
+src="pagerank-levelwise-static-vs-dynamic"
 out="/home/resources/Documents/subhajit/$src.log"
 ulimit -s unlimited
 printf "" > "$out"
