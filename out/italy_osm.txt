@@ -1,0 +1,259 @@
+Loading graph /home/subhajit/data/italy_osm.mtx ...
+order: 6686493 size: 14027956 {}
+order: 6686493 size: 14027956 {} (loopDeadEnds)
+order: 6686493 size: 14027956 {} (transposeWithDegree)
+[04036.024 ms; 063 iters.] [0.0000e+00 err.] pagerankMonolithic
+# Batch size 1e+00
+order: 6686493 size: 14027957 {} [03955.378 ms; 063 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 6686493 size: 14027957 {} [03172.787 ms; 063 iters.] [8.5099e-07 err.] pagerankLevelwise
+order: 6686493 size: 14027957 {} [00061.037 ms; 001 iters.] [4.3479e-07 err.] pagerankLevelwise [dynamic]
+order: 6686493 size: 14027957 {} [03947.509 ms; 063 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 6686493 size: 14027957 {} [03177.119 ms; 063 iters.] [8.5099e-07 err.] pagerankLevelwise
+order: 6686493 size: 14027957 {} [00061.154 ms; 001 iters.] [4.3467e-07 err.] pagerankLevelwise [dynamic]
+order: 6686494 size: 14027958 {} [03923.659 ms; 063 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 6686494 size: 14027958 {} [03161.083 ms; 063 iters.] [2.1032e-12 err.] pagerankLevelwise
+order: 6686494 size: 14027958 {} [00060.954 ms; 001 iters.] [9.6975e-07 err.] pagerankLevelwise [dynamic]
+order: 6686494 size: 14027957 {} [03925.726 ms; 063 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 6686494 size: 14027957 {} [03168.407 ms; 063 iters.] [8.5034e-07 err.] pagerankLevelwise
+order: 6686494 size: 14027957 {} [00061.092 ms; 001 iters.] [4.0139e-07 err.] pagerankLevelwise [dynamic]
+order: 6686493 size: 14027957 {} [03937.939 ms; 063 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 6686493 size: 14027957 {} [03177.647 ms; 063 iters.] [8.5099e-07 err.] pagerankLevelwise
+order: 6686493 size: 14027957 {} [00060.963 ms; 001 iters.] [4.3479e-07 err.] pagerankLevelwise [dynamic]
+
+# Batch size 5e+00
+order: 6686494 size: 14027962 {} [03947.838 ms; 063 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 6686494 size: 14027962 {} [03169.707 ms; 063 iters.] [8.5035e-07 err.] pagerankLevelwise
+order: 6686494 size: 14027962 {} [00111.815 ms; 002 iters.] [1.4777e-06 err.] pagerankLevelwise [dynamic]
+order: 6686493 size: 14027961 {} [03957.110 ms; 063 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 6686493 size: 14027961 {} [03172.081 ms; 063 iters.] [8.5098e-07 err.] pagerankLevelwise
+order: 6686493 size: 14027961 {} [00111.319 ms; 002 iters.] [2.4123e-06 err.] pagerankLevelwise [dynamic]
+order: 6686495 size: 14027962 {} [03924.716 ms; 063 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 6686495 size: 14027962 {} [03177.379 ms; 063 iters.] [8.5269e-07 err.] pagerankLevelwise
+order: 6686495 size: 14027962 {} [00163.289 ms; 003 iters.] [1.5794e-06 err.] pagerankLevelwise [dynamic]
+order: 6686494 size: 14027962 {} [03920.738 ms; 063 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 6686494 size: 14027962 {} [03170.887 ms; 063 iters.] [8.5034e-07 err.] pagerankLevelwise
+order: 6686494 size: 14027962 {} [00111.928 ms; 002 iters.] [2.3349e-06 err.] pagerankLevelwise [dynamic]
+order: 6686493 size: 14027961 {} [03970.800 ms; 063 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 6686493 size: 14027961 {} [03169.406 ms; 063 iters.] [8.5099e-07 err.] pagerankLevelwise
+order: 6686493 size: 14027961 {} [00111.721 ms; 002 iters.] [2.4471e-06 err.] pagerankLevelwise [dynamic]
+
+# Batch size 1e+01
+order: 6686494 size: 14027966 {} [03974.533 ms; 063 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 6686494 size: 14027966 {} [03170.055 ms; 063 iters.] [8.5033e-07 err.] pagerankLevelwise
+order: 6686494 size: 14027966 {} [00212.901 ms; 004 iters.] [2.8082e-06 err.] pagerankLevelwise [dynamic]
+order: 6686494 size: 14027966 {} [03930.708 ms; 063 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 6686494 size: 14027966 {} [03180.839 ms; 063 iters.] [8.5035e-07 err.] pagerankLevelwise
+order: 6686494 size: 14027966 {} [00216.190 ms; 004 iters.] [2.7468e-06 err.] pagerankLevelwise [dynamic]
+order: 6686496 size: 14027968 {} [03965.663 ms; 063 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 6686496 size: 14027968 {} [03174.084 ms; 063 iters.] [8.5160e-07 err.] pagerankLevelwise
+order: 6686496 size: 14027968 {} [00213.164 ms; 004 iters.] [2.5777e-06 err.] pagerankLevelwise [dynamic]
+order: 6686497 size: 14027968 {} [03929.062 ms; 063 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 6686497 size: 14027968 {} [03173.199 ms; 063 iters.] [8.5171e-07 err.] pagerankLevelwise
+order: 6686497 size: 14027968 {} [00263.677 ms; 005 iters.] [1.6268e-06 err.] pagerankLevelwise [dynamic]
+order: 6686496 size: 14027967 {} [03938.012 ms; 063 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 6686496 size: 14027967 {} [03176.130 ms; 063 iters.] [8.5162e-07 err.] pagerankLevelwise
+order: 6686496 size: 14027967 {} [00212.353 ms; 004 iters.] [2.5606e-06 err.] pagerankLevelwise [dynamic]
+
+# Batch size 5e+01
+order: 6686502 size: 14028011 {} [03912.270 ms; 063 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 6686502 size: 14028011 {} [03177.856 ms; 063 iters.] [8.5109e-07 err.] pagerankLevelwise
+order: 6686502 size: 14028011 {} [00511.367 ms; 010 iters.] [3.0179e-06 err.] pagerankLevelwise [dynamic]
+order: 6686501 size: 14028011 {} [03939.148 ms; 063 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 6686501 size: 14028011 {} [03180.796 ms; 063 iters.] [8.5051e-07 err.] pagerankLevelwise
+order: 6686501 size: 14028011 {} [00464.483 ms; 009 iters.] [4.1402e-06 err.] pagerankLevelwise [dynamic]
+order: 6686499 size: 14028010 {} [03928.558 ms; 063 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 6686499 size: 14028010 {} [03178.161 ms; 063 iters.] [8.5183e-07 err.] pagerankLevelwise
+order: 6686499 size: 14028010 {} [00466.671 ms; 009 iters.] [4.2551e-06 err.] pagerankLevelwise [dynamic]
+order: 6686506 size: 14028011 {} [03931.755 ms; 063 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 6686506 size: 14028011 {} [03185.578 ms; 063 iters.] [8.5492e-07 err.] pagerankLevelwise
+order: 6686506 size: 14028011 {} [00567.110 ms; 011 iters.] [2.8289e-06 err.] pagerankLevelwise [dynamic]
+order: 6686502 size: 14028010 {} [03946.682 ms; 063 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 6686502 size: 14028010 {} [03180.632 ms; 063 iters.] [8.5105e-07 err.] pagerankLevelwise
+order: 6686502 size: 14028010 {} [00516.269 ms; 010 iters.] [3.6920e-06 err.] pagerankLevelwise [dynamic]
+
+# Batch size 1e+02
+order: 6686520 size: 14028070 {} [03989.595 ms; 063 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 6686520 size: 14028070 {} [03173.112 ms; 063 iters.] [8.5103e-07 err.] pagerankLevelwise
+order: 6686520 size: 14028070 {} [00719.725 ms; 014 iters.] [2.8031e-06 err.] pagerankLevelwise [dynamic]
+order: 6686509 size: 14028063 {} [03940.197 ms; 063 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 6686509 size: 14028063 {} [03185.730 ms; 063 iters.] [8.5534e-07 err.] pagerankLevelwise
+order: 6686509 size: 14028063 {} [00716.868 ms; 014 iters.] [2.9268e-06 err.] pagerankLevelwise [dynamic]
+order: 6686512 size: 14028062 {} [03930.333 ms; 063 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 6686512 size: 14028062 {} [03181.571 ms; 063 iters.] [8.5015e-07 err.] pagerankLevelwise
+order: 6686512 size: 14028062 {} [00715.445 ms; 014 iters.] [2.8790e-06 err.] pagerankLevelwise [dynamic]
+order: 6686503 size: 14028061 {} [03941.323 ms; 063 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 6686503 size: 14028061 {} [03182.163 ms; 063 iters.] [8.6222e-07 err.] pagerankLevelwise
+order: 6686503 size: 14028061 {} [00668.629 ms; 013 iters.] [4.1391e-06 err.] pagerankLevelwise [dynamic]
+order: 6686509 size: 14028063 {} [03953.001 ms; 063 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 6686509 size: 14028063 {} [03173.719 ms; 063 iters.] [1.9497e-11 err.] pagerankLevelwise
+order: 6686509 size: 14028063 {} [00667.139 ms; 013 iters.] [4.0486e-06 err.] pagerankLevelwise [dynamic]
+
+# Batch size 5e+02
+order: 6686592 size: 14028498 {} [03955.684 ms; 063 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 6686592 size: 14028498 {} [03181.182 ms; 062 iters.] [8.5360e-07 err.] pagerankLevelwise
+order: 6686592 size: 14028498 {} [01070.389 ms; 021 iters.] [4.1209e-06 err.] pagerankLevelwise [dynamic]
+order: 6686576 size: 14028495 {} [03947.086 ms; 063 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 6686576 size: 14028495 {} [03184.828 ms; 063 iters.] [8.5105e-07 err.] pagerankLevelwise
+order: 6686576 size: 14028495 {} [01170.447 ms; 023 iters.] [3.4825e-06 err.] pagerankLevelwise [dynamic]
+order: 6686603 size: 14028506 {} [03959.740 ms; 063 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 6686603 size: 14028506 {} [03196.212 ms; 062 iters.] [8.5311e-07 err.] pagerankLevelwise
+order: 6686603 size: 14028506 {} [01068.537 ms; 021 iters.] [4.6594e-06 err.] pagerankLevelwise [dynamic]
+order: 6686584 size: 14028504 {} [03945.074 ms; 063 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 6686584 size: 14028504 {} [03183.368 ms; 063 iters.] [8.5503e-07 err.] pagerankLevelwise
+order: 6686584 size: 14028504 {} [01121.290 ms; 022 iters.] [3.4878e-06 err.] pagerankLevelwise [dynamic]
+order: 6686595 size: 14028511 {} [03924.202 ms; 063 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 6686595 size: 14028511 {} [03189.667 ms; 062 iters.] [8.5034e-07 err.] pagerankLevelwise
+order: 6686595 size: 14028511 {} [01068.575 ms; 021 iters.] [4.7272e-06 err.] pagerankLevelwise [dynamic]
+
+# Batch size 1e+03
+order: 6686684 size: 14029060 {} [03951.574 ms; 063 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 6686684 size: 14029060 {} [03205.180 ms; 062 iters.] [8.5544e-07 err.] pagerankLevelwise
+order: 6686684 size: 14029060 {} [01274.263 ms; 025 iters.] [4.6997e-06 err.] pagerankLevelwise [dynamic]
+order: 6686691 size: 14029062 {} [03929.736 ms; 063 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 6686691 size: 14029062 {} [03186.685 ms; 062 iters.] [8.4975e-07 err.] pagerankLevelwise
+order: 6686691 size: 14029062 {} [01222.389 ms; 024 iters.] [4.7013e-06 err.] pagerankLevelwise [dynamic]
+order: 6686682 size: 14029048 {} [03946.411 ms; 063 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 6686682 size: 14029048 {} [03178.513 ms; 062 iters.] [8.5500e-07 err.] pagerankLevelwise
+order: 6686682 size: 14029048 {} [01219.738 ms; 024 iters.] [4.7339e-06 err.] pagerankLevelwise [dynamic]
+order: 6686671 size: 14029046 {} [03951.272 ms; 063 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 6686671 size: 14029046 {} [03190.750 ms; 062 iters.] [8.5299e-07 err.] pagerankLevelwise
+order: 6686671 size: 14029046 {} [01269.430 ms; 025 iters.] [4.7185e-06 err.] pagerankLevelwise [dynamic]
+order: 6686651 size: 14029030 {} [03940.271 ms; 063 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 6686651 size: 14029030 {} [03184.847 ms; 062 iters.] [8.6013e-07 err.] pagerankLevelwise
+order: 6686651 size: 14029030 {} [01323.997 ms; 026 iters.] [3.4591e-06 err.] pagerankLevelwise [dynamic]
+
+# Batch size 5e+03
+order: 6687377 size: 14033414 {} [03938.638 ms; 063 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 6687377 size: 14033414 {} [03813.613 ms; 074 iters.] [5.1686e-06 err.] pagerankLevelwise
+order: 6687377 size: 14033414 {} [03794.976 ms; 074 iters.] [5.1686e-06 err.] pagerankLevelwise [dynamic]
+order: 6687395 size: 14033401 {} [03951.000 ms; 063 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 6687395 size: 14033401 {} [03213.392 ms; 062 iters.] [8.5520e-07 err.] pagerankLevelwise
+order: 6687395 size: 14033401 {} [01739.134 ms; 034 iters.] [4.1035e-06 err.] pagerankLevelwise [dynamic]
+order: 6687427 size: 14033417 {} [03969.467 ms; 063 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 6687427 size: 14033417 {} [03176.103 ms; 061 iters.] [8.4982e-07 err.] pagerankLevelwise
+order: 6687427 size: 14033417 {} [01684.627 ms; 033 iters.] [5.6863e-06 err.] pagerankLevelwise [dynamic]
+order: 6687386 size: 14033416 {} [04035.128 ms; 063 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 6687386 size: 14033416 {} [03210.511 ms; 062 iters.] [8.5328e-07 err.] pagerankLevelwise
+order: 6687386 size: 14033416 {} [01743.034 ms; 034 iters.] [4.1243e-06 err.] pagerankLevelwise [dynamic]
+order: 6687414 size: 14033420 {} [03964.228 ms; 063 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 6687414 size: 14033420 {} [03807.492 ms; 074 iters.] [5.2469e-06 err.] pagerankLevelwise
+order: 6687414 size: 14033420 {} [03804.600 ms; 074 iters.] [5.2469e-06 err.] pagerankLevelwise [dynamic]
+
+# Batch size 1e+04
+order: 6688304 size: 14038848 {} [03950.253 ms; 063 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 6688304 size: 14038848 {} [03217.459 ms; 062 iters.] [8.5453e-07 err.] pagerankLevelwise
+order: 6688304 size: 14038848 {} [01898.491 ms; 037 iters.] [5.5223e-06 err.] pagerankLevelwise [dynamic]
+order: 6688330 size: 14038844 {} [03953.063 ms; 063 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 6688330 size: 14038844 {} [03212.931 ms; 062 iters.] [8.5242e-07 err.] pagerankLevelwise
+order: 6688330 size: 14038844 {} [01890.397 ms; 037 iters.] [5.5459e-06 err.] pagerankLevelwise [dynamic]
+order: 6688213 size: 14038854 {} [03967.761 ms; 063 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 6688213 size: 14038854 {} [03815.359 ms; 074 iters.] [5.1137e-06 err.] pagerankLevelwise
+order: 6688213 size: 14038854 {} [03818.088 ms; 074 iters.] [5.1137e-06 err.] pagerankLevelwise [dynamic]
+order: 6688228 size: 14038848 {} [03957.259 ms; 063 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 6688228 size: 14038848 {} [03820.348 ms; 074 iters.] [5.2400e-06 err.] pagerankLevelwise
+order: 6688228 size: 14038848 {} [03822.118 ms; 074 iters.] [5.2400e-06 err.] pagerankLevelwise [dynamic]
+order: 6688339 size: 14038889 {} [03977.189 ms; 063 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 6688339 size: 14038889 {} [03828.590 ms; 074 iters.] [5.1541e-06 err.] pagerankLevelwise
+order: 6688339 size: 14038889 {} [03828.235 ms; 074 iters.] [5.1541e-06 err.] pagerankLevelwise [dynamic]
+
+# Batch size 5e+04
+order: 6695537 size: 14082535 {} [04086.378 ms; 063 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 6695537 size: 14082535 {} [03962.746 ms; 074 iters.] [5.1163e-06 err.] pagerankLevelwise
+order: 6695537 size: 14082535 {} [03960.532 ms; 074 iters.] [5.1163e-06 err.] pagerankLevelwise [dynamic]
+order: 6695539 size: 14082553 {} [04073.945 ms; 063 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 6695539 size: 14082553 {} [03278.158 ms; 061 iters.] [8.5700e-07 err.] pagerankLevelwise
+order: 6695539 size: 14082553 {} [02441.013 ms; 046 iters.] [3.9289e-06 err.] pagerankLevelwise [dynamic]
+order: 6695539 size: 14082420 {} [04067.543 ms; 063 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 6695539 size: 14082420 {} [03284.135 ms; 062 iters.] [8.5755e-07 err.] pagerankLevelwise
+order: 6695539 size: 14082420 {} [02438.719 ms; 046 iters.] [3.9150e-06 err.] pagerankLevelwise [dynamic]
+order: 6695477 size: 14082478 {} [04066.127 ms; 063 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 6695477 size: 14082478 {} [03279.491 ms; 061 iters.] [8.5741e-07 err.] pagerankLevelwise
+order: 6695477 size: 14082478 {} [02441.670 ms; 046 iters.] [3.9214e-06 err.] pagerankLevelwise [dynamic]
+order: 6695634 size: 14082516 {} [04062.841 ms; 063 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 6695634 size: 14082516 {} [03279.894 ms; 061 iters.] [8.5808e-07 err.] pagerankLevelwise
+order: 6695634 size: 14082516 {} [02434.901 ms; 046 iters.] [3.9156e-06 err.] pagerankLevelwise [dynamic]
+
+# Batch size 1e+05
+order: 6704535 size: 14136895 {} [04219.849 ms; 063 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 6704535 size: 14136895 {} [03511.704 ms; 061 iters.] [8.6104e-07 err.] pagerankLevelwise
+order: 6704535 size: 14136895 {} [02763.405 ms; 049 iters.] [4.3919e-06 err.] pagerankLevelwise [dynamic]
+order: 6704338 size: 14136797 {} [04215.944 ms; 063 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 6704338 size: 14136797 {} [03506.705 ms; 061 iters.] [8.6276e-07 err.] pagerankLevelwise
+order: 6704338 size: 14136797 {} [02773.340 ms; 049 iters.] [4.3978e-06 err.] pagerankLevelwise [dynamic]
+order: 6704479 size: 14136925 {} [04190.803 ms; 063 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 6704479 size: 14136925 {} [03510.871 ms; 062 iters.] [8.6219e-07 err.] pagerankLevelwise
+order: 6704479 size: 14136925 {} [02768.097 ms; 049 iters.] [4.3937e-06 err.] pagerankLevelwise [dynamic]
+order: 6704498 size: 14136874 {} [04192.677 ms; 063 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 6704498 size: 14136874 {} [03497.788 ms; 061 iters.] [8.6421e-07 err.] pagerankLevelwise
+order: 6704498 size: 14136874 {} [02763.344 ms; 049 iters.] [4.3950e-06 err.] pagerankLevelwise [dynamic]
+order: 6704474 size: 14136966 {} [04190.703 ms; 063 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 6704474 size: 14136966 {} [04232.471 ms; 074 iters.] [5.0954e-06 err.] pagerankLevelwise
+order: 6704474 size: 14136966 {} [04202.467 ms; 074 iters.] [5.0954e-06 err.] pagerankLevelwise [dynamic]
+
+# Batch size 5e+05
+order: 6771290 size: 14568764 {} [04962.742 ms; 062 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 6771290 size: 14568764 {} [04562.188 ms; 060 iters.] [6.6349e-07 err.] pagerankLevelwise
+order: 6771290 size: 14568764 {} [04041.062 ms; 054 iters.] [2.8245e-06 err.] pagerankLevelwise [dynamic]
+order: 6771829 size: 14569199 {} [04968.695 ms; 062 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 6771829 size: 14569199 {} [05520.359 ms; 073 iters.] [6.7835e-06 err.] pagerankLevelwise
+order: 6771829 size: 14569199 {} [05517.110 ms; 073 iters.] [6.7835e-06 err.] pagerankLevelwise [dynamic]
+order: 6771991 size: 14569286 {} [04988.698 ms; 062 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 6771991 size: 14569286 {} [04587.992 ms; 060 iters.] [6.6603e-07 err.] pagerankLevelwise
+order: 6771991 size: 14569286 {} [04084.442 ms; 054 iters.] [2.8295e-06 err.] pagerankLevelwise [dynamic]
+order: 6771334 size: 14568969 {} [04964.909 ms; 062 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 6771334 size: 14568969 {} [05521.284 ms; 073 iters.] [6.7852e-06 err.] pagerankLevelwise
+order: 6771334 size: 14568969 {} [05568.526 ms; 073 iters.] [6.7852e-06 err.] pagerankLevelwise [dynamic]
+order: 6771627 size: 14569037 {} [04958.293 ms; 062 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 6771627 size: 14569037 {} [04556.825 ms; 061 iters.] [6.6442e-07 err.] pagerankLevelwise
+order: 6771627 size: 14569037 {} [04034.730 ms; 054 iters.] [3.4933e-06 err.] pagerankLevelwise [dynamic]
+
+# Batch size 1e+06
+order: 6846179 size: 15102530 {} [05637.542 ms; 061 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 6846179 size: 15102530 {} [05483.458 ms; 060 iters.] [1.2191e-06 err.] pagerankLevelwise
+order: 6846179 size: 15102530 {} [04919.487 ms; 055 iters.] [3.0272e-06 err.] pagerankLevelwise [dynamic]
+order: 6845969 size: 15102216 {} [05609.786 ms; 061 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 6845969 size: 15102216 {} [06760.751 ms; 073 iters.] [6.6855e-06 err.] pagerankLevelwise
+order: 6845969 size: 15102216 {} [06580.004 ms; 073 iters.] [6.6855e-06 err.] pagerankLevelwise [dynamic]
+order: 6846465 size: 15102621 {} [05643.880 ms; 061 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 6846465 size: 15102621 {} [05388.871 ms; 060 iters.] [1.2228e-06 err.] pagerankLevelwise
+order: 6846465 size: 15102621 {} [04912.730 ms; 055 iters.] [3.0260e-06 err.] pagerankLevelwise [dynamic]
+order: 6845950 size: 15102496 {} [05700.010 ms; 061 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 6845950 size: 15102496 {} [06747.506 ms; 073 iters.] [5.7819e-06 err.] pagerankLevelwise
+order: 6845950 size: 15102496 {} [06697.749 ms; 073 iters.] [5.7819e-06 err.] pagerankLevelwise [dynamic]
+order: 6845862 size: 15102345 {} [05619.901 ms; 061 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 6845862 size: 15102345 {} [06756.595 ms; 073 iters.] [6.6851e-06 err.] pagerankLevelwise
+order: 6845862 size: 15102345 {} [06593.552 ms; 073 iters.] [6.6851e-06 err.] pagerankLevelwise [dynamic]
+
+# Batch size 5e+06
+order: 7183921 size: 19194713 {} [07997.272 ms; 057 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 7183921 size: 19194713 {} [06972.332 ms; 050 iters.] [4.6497e-06 err.] pagerankLevelwise
+order: 7183921 size: 19194713 {} [06765.992 ms; 049 iters.] [4.7020e-06 err.] pagerankLevelwise [dynamic]
+order: 7183435 size: 19195204 {} [07989.999 ms; 057 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 7183435 size: 19195204 {} [06977.977 ms; 050 iters.] [4.0046e-06 err.] pagerankLevelwise
+order: 7183435 size: 19195204 {} [06775.726 ms; 049 iters.] [4.7549e-06 err.] pagerankLevelwise [dynamic]
+order: 7184320 size: 19195318 {} [07992.981 ms; 057 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 7184320 size: 19195318 {} [06976.298 ms; 050 iters.] [3.9865e-06 err.] pagerankLevelwise
+order: 7184320 size: 19195318 {} [06762.925 ms; 049 iters.] [5.5754e-06 err.] pagerankLevelwise [dynamic]
+order: 7183639 size: 19195140 {} [07974.778 ms; 057 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 7183639 size: 19195140 {} [06979.184 ms; 050 iters.] [3.9821e-06 err.] pagerankLevelwise
+order: 7183639 size: 19195140 {} [06757.961 ms; 049 iters.] [5.5710e-06 err.] pagerankLevelwise [dynamic]
+order: 7184111 size: 19195770 {} [07995.033 ms; 057 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 7184111 size: 19195770 {} [10017.914 ms; 071 iters.] [9.7825e-06 err.] pagerankLevelwise
+order: 7184111 size: 19195770 {} [09878.865 ms; 071 iters.] [9.7825e-06 err.] pagerankLevelwise [dynamic]
+
+# Batch size 1e+07
+order: 7311430 size: 24155884 {} [09919.107 ms; 057 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 7311430 size: 24155884 {} [08684.528 ms; 049 iters.] [5.9049e-06 err.] pagerankLevelwise
+order: 7311430 size: 24155884 {} [08336.238 ms; 049 iters.] [5.9229e-06 err.] pagerankLevelwise [dynamic]
+order: 7311752 size: 24155657 {} [09905.624 ms; 057 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 7311752 size: 24155657 {} [08681.568 ms; 049 iters.] [5.8642e-06 err.] pagerankLevelwise
+order: 7311752 size: 24155657 {} [08369.221 ms; 049 iters.] [5.8826e-06 err.] pagerankLevelwise [dynamic]
+order: 7311668 size: 24155961 {} [09900.729 ms; 057 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 7311668 size: 24155961 {} [08674.617 ms; 049 iters.] [4.9841e-06 err.] pagerankLevelwise
+order: 7311668 size: 24155961 {} [08294.995 ms; 049 iters.] [5.0019e-06 err.] pagerankLevelwise [dynamic]
+order: 7311708 size: 24155837 {} [09926.655 ms; 057 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 7311708 size: 24155837 {} [12491.093 ms; 071 iters.] [9.9593e-06 err.] pagerankLevelwise
+order: 7311708 size: 24155837 {} [11931.814 ms; 071 iters.] [9.9593e-06 err.] pagerankLevelwise [dynamic]
+order: 7311667 size: 24155700 {} [09913.606 ms; 057 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 7311667 size: 24155700 {} [08666.123 ms; 049 iters.] [4.9735e-06 err.] pagerankLevelwise
+order: 7311667 size: 24155700 {} [08331.504 ms; 049 iters.] [4.9899e-06 err.] pagerankLevelwise [dynamic]

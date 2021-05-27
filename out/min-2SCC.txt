@@ -1,0 +1,55 @@
+Loading graph /home/subhajit/data/min-2SCC.mtx ...
+order: 8 size: 12 {}
+order: 8 size: 12 {} (loopDeadEnds)
+order: 8 size: 12 {} (transposeWithDegree)
+[00000.009 ms; 040 iters.] [0.0000e+00 err.] pagerankMonolithic
+# Batch size 1e+00
+order: 8 size: 13 {} [00000.005 ms; 025 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 8 size: 13 {} [00000.005 ms; 025 iters.] [6.7800e-07 err.] pagerankLevelwise
+order: 8 size: 13 {} [00000.006 ms; 026 iters.] [2.6636e-07 err.] pagerankLevelwise [dynamic]
+order: 8 size: 13 {} [00000.008 ms; 038 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 8 size: 13 {} [00000.009 ms; 038 iters.] [7.9721e-07 err.] pagerankLevelwise
+order: 8 size: 13 {} [00000.007 ms; 033 iters.] [6.8918e-07 err.] pagerankLevelwise [dynamic]
+order: 8 size: 13 {} [00000.009 ms; 039 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 8 size: 13 {} [00000.009 ms; 039 iters.] [9.5367e-07 err.] pagerankLevelwise
+order: 8 size: 13 {} [00000.010 ms; 037 iters.] [2.5332e-07 err.] pagerankLevelwise [dynamic]
+order: 8 size: 13 {} [00000.005 ms; 025 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 8 size: 13 {} [00000.005 ms; 025 iters.] [6.7800e-07 err.] pagerankLevelwise
+order: 8 size: 13 {} [00000.006 ms; 026 iters.] [2.6636e-07 err.] pagerankLevelwise [dynamic]
+order: 8 size: 13 {} [00000.006 ms; 028 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 8 size: 13 {} [00000.006 ms; 028 iters.] [9.3505e-07 err.] pagerankLevelwise
+order: 8 size: 13 {} [00000.007 ms; 029 iters.] [1.7881e-07 err.] pagerankLevelwise [dynamic]
+
+# Batch size 5e+00
+order: 8 size: 16 {} [00000.004 ms; 026 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 8 size: 16 {} [00000.004 ms; 026 iters.] [8.1211e-07 err.] pagerankLevelwise
+order: 8 size: 16 {} [00000.003 ms; 025 iters.] [1.3821e-06 err.] pagerankLevelwise [dynamic]
+order: 8 size: 16 {} [00000.003 ms; 025 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 8 size: 16 {} [00000.003 ms; 025 iters.] [8.1584e-07 err.] pagerankLevelwise
+order: 8 size: 16 {} [00000.005 ms; 026 iters.] [2.5332e-07 err.] pagerankLevelwise [dynamic]
+order: 8 size: 15 {} [00000.006 ms; 040 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 8 size: 15 {} [00000.006 ms; 040 iters.] [6.9290e-07 err.] pagerankLevelwise
+order: 8 size: 15 {} [00000.005 ms; 034 iters.] [2.9504e-06 err.] pagerankLevelwise [dynamic]
+order: 8 size: 16 {} [00000.003 ms; 023 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 8 size: 16 {} [00000.003 ms; 023 iters.] [9.1642e-07 err.] pagerankLevelwise
+order: 8 size: 16 {} [00000.003 ms; 024 iters.] [1.1101e-06 err.] pagerankLevelwise [dynamic]
+order: 9 size: 18 {} [00000.006 ms; 040 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 9 size: 18 {} [00000.006 ms; 040 iters.] [9.7603e-07 err.] pagerankLevelwise
+order: 9 size: 18 {} [00000.006 ms; 039 iters.] [6.1840e-07 err.] pagerankLevelwise [dynamic]
+
+# Batch size 1e+01
+order: 9 size: 22 {} [00000.010 ms; 058 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 9 size: 22 {} [00000.010 ms; 058 iters.] [8.8662e-07 err.] pagerankLevelwise
+order: 9 size: 22 {} [00000.010 ms; 059 iters.] [1.3113e-06 err.] pagerankLevelwise [dynamic]
+order: 9 size: 19 {} [00000.004 ms; 027 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 9 size: 19 {} [00000.004 ms; 027 iters.] [9.5367e-07 err.] pagerankLevelwise
+order: 9 size: 19 {} [00000.004 ms; 025 iters.] [1.0431e-07 err.] pagerankLevelwise [dynamic]
+order: 9 size: 19 {} [00000.009 ms; 058 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 9 size: 19 {} [00000.009 ms; 058 iters.] [8.6427e-07 err.] pagerankLevelwise
+order: 9 size: 19 {} [00000.009 ms; 061 iters.] [5.8115e-07 err.] pagerankLevelwise [dynamic]
+order: 9 size: 22 {} [00000.006 ms; 036 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 9 size: 22 {} [00000.006 ms; 036 iters.] [8.9407e-07 err.] pagerankLevelwise
+order: 9 size: 22 {} [00000.002 ms; 036 iters.] [2.8312e-07 err.] pagerankLevelwise [dynamic]
+order: 9 size: 20 {} [00000.001 ms; 018 iters.] [0.0000e+00 err.] pagerankMonolithic
+order: 9 size: 20 {} [00000.001 ms; 018 iters.] [7.8976e-07 err.] pagerankLevelwise
+order: 9 size: 20 {} [00000.001 ms; 020 iters.] [5.6624e-07 err.] pagerankLevelwise [dynamic]
