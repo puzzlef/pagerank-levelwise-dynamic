@@ -1,0 +1,88 @@
+Loading graph indochina-2004.mtx ...
+order: 7414866 size: 195418439 {}
+[17894.709 ms; 059 iters.] [0.0000e+0 err.] pagerankMonolithic
+
+# Batch size 1e+0
+order: 7414866 size: 195418439 {} [17896.822 ms; 059 iters.] [0.0000e+0 err.] pagerankMonolithic
+order: 7414866 size: 195418439 {} [15459.352 ms; 062 iters.] [6.3006e-6 err.] pagerankLevelwise
+order: 7414866 size: 195418439 {} [17202.509 ms; 055 iters.] [5.0839e-6 err.] pagerankLevelwise [dynamic]
+
+# Batch size 5e+0
+order: 7414867.2 size: 195418443.4 {} [17892.283 ms; 059 iters.] [0.0000e+0 err.] pagerankMonolithic
+order: 7414867.2 size: 195418443.4 {} [16704.192 ms; 059 iters.] [4.2193e-6 err.] pagerankLevelwise
+order: 7414867.2 size: 195418443.4 {} [07040.398 ms; 028 iters.] [3.2893e-6 err.] pagerankLevelwise [dynamic]
+
+# Batch size 1e+1
+order: 7414867.2 size: 195418448.4 {} [17897.291 ms; 059 iters.] [0.0000e+0 err.] pagerankMonolithic
+order: 7414867.2 size: 195418448.4 {} [16498.769 ms; 058 iters.] [3.7436e-6 err.] pagerankLevelwise
+order: 7414867.2 size: 195418448.4 {} [05154.658 ms; 022 iters.] [3.1310e-6 err.] pagerankLevelwise [dynamic]
+
+# Batch size 5e+1
+order: 7414874.6 size: 195418492.2 {} [17890.545 ms; 059 iters.] [0.0000e+0 err.] pagerankMonolithic
+order: 7414874.6 size: 195418492.2 {} [16200.464 ms; 060 iters.] [4.8562e-6 err.] pagerankLevelwise
+order: 7414874.6 size: 195418492.2 {} [08383.763 ms; 030 iters.] [4.3604e-6 err.] pagerankLevelwise [dynamic]
+
+# Batch size 1e+2
+order: 7414882.2 size: 195418545.8 {} [17888.753 ms; 059 iters.] [0.0000e+0 err.] pagerankMonolithic
+order: 7414882.2 size: 195418545.8 {} [16114.578 ms; 061 iters.] [5.6497e-6 err.] pagerankLevelwise
+order: 7414882.2 size: 195418545.8 {} [06723.238 ms; 030 iters.] [4.6462e-6 err.] pagerankLevelwise [dynamic]
+
+# Batch size 5e+2
+order: 7414954.4 size: 195418980 {} [17888.524 ms; 059 iters.] [0.0000e+0 err.] pagerankMonolithic
+order: 7414954.4 size: 195418980 {} [16980.356 ms; 060 iters.] [4.8239e-6 err.] pagerankLevelwise
+order: 7414954.4 size: 195418980 {} [07668.710 ms; 031 iters.] [4.8363e-6 err.] pagerankLevelwise [dynamic]
+
+# Batch size 1e+3
+order: 7415044.8 size: 195419529.2 {} [17886.274 ms; 059 iters.] [0.0000e+0 err.] pagerankMonolithic
+order: 7415044.8 size: 195419529.2 {} [16921.360 ms; 059 iters.] [4.2865e-6 err.] pagerankLevelwise
+order: 7415044.8 size: 195419529.2 {} [12757.101 ms; 044 iters.] [5.5948e-6 err.] pagerankLevelwise [dynamic]
+
+# Batch size 5e+3
+order: 7415774.2 size: 195423891.2 {} [17924.809 ms; 059 iters.] [0.0000e+0 err.] pagerankMonolithic
+order: 7415774.2 size: 195423891.2 {} [18436.297 ms; 063 iters.] [5.8497e-6 err.] pagerankLevelwise
+order: 7415774.2 size: 195423891.2 {} [16029.889 ms; 052 iters.] [6.2163e-6 err.] pagerankLevelwise [dynamic]
+
+# Batch size 1e+4
+order: 7416708.4 size: 195429354.2 {} [17915.745 ms; 059 iters.] [0.0000e+0 err.] pagerankMonolithic
+order: 7416708.4 size: 195429354.2 {} [17569.196 ms; 060 iters.] [4.7199e-6 err.] pagerankLevelwise
+order: 7416708.4 size: 195429354.2 {} [14584.393 ms; 048 iters.] [6.1625e-6 err.] pagerankLevelwise [dynamic]
+
+# Batch size 5e+4
+order: 7423926.6 size: 195472944 {} [18020.611 ms; 059 iters.] [0.0000e+0 err.] pagerankMonolithic
+order: 7423926.6 size: 195472944 {} [17605.664 ms; 059 iters.] [3.5881e-6 err.] pagerankLevelwise
+order: 7423926.6 size: 195472944 {} [12212.726 ms; 041 iters.] [6.4052e-6 err.] pagerankLevelwise [dynamic]
+
+# Batch size 1e+5
+order: 7432746 size: 195527348.8 {} [18163.574 ms; 059 iters.] [0.0000e+0 err.] pagerankMonolithic
+order: 7432746 size: 195527348.8 {} [18970.467 ms; 062 iters.] [5.1972e-6 err.] pagerankLevelwise
+order: 7432746 size: 195527348.8 {} [16611.557 ms; 053 iters.] [6.2487e-6 err.] pagerankLevelwise [dynamic]
+
+# Batch size 5e+5
+order: 7500580.6 size: 195959962 {} [18793.086 ms; 057 iters.] [0.0000e+0 err.] pagerankMonolithic
+order: 7500580.6 size: 195959962 {} [18784.786 ms; 057 iters.] [2.8766e-6 err.] pagerankLevelwise
+order: 7500580.6 size: 195959962 {} [15333.943 ms; 047 iters.] [5.6826e-6 err.] pagerankLevelwise [dynamic]
+
+# Batch size 1e+6
+order: 7576219.2 size: 196494185.4 {} [19423.201 ms; 056 iters.] [0.0000e+0 err.] pagerankMonolithic
+order: 7576219.2 size: 196494185.4 {} [21437.575 ms; 061 iters.] [5.0115e-6 err.] pagerankLevelwise
+order: 7576219.2 size: 196494185.4 {} [19781.294 ms; 056 iters.] [6.2714e-6 err.] pagerankLevelwise [dynamic]
+
+# Batch size 5e+6
+order: 7939352 size: 200603074.6 {} [23297.319 ms; 056 iters.] [0.0000e+0 err.] pagerankMonolithic
+order: 7939352 size: 200603074.6 {} [29662.528 ms; 061 iters.] [6.9453e-6 err.] pagerankLevelwise
+order: 7939352 size: 200603074.6 {} [29789.945 ms; 059 iters.] [7.1923e-6 err.] pagerankLevelwise [dynamic]
+
+# Batch size 1e+7
+order: 8093251.4 size: 205572038.2 {} [26469.759 ms; 057 iters.] [0.0000e+0 err.] pagerankMonolithic
+order: 8093251.4 size: 205572038.2 {} [36591.669 ms; 056 iters.] [5.5039e-6 err.] pagerankLevelwise
+order: 8093251.4 size: 205572038.2 {} [32809.314 ms; 053 iters.] [5.7905e-6 err.] pagerankLevelwise [dynamic]
+
+# Batch size 5e+7
+order: 8156349.8 size: 245419819 {} [34882.031 ms; 045 iters.] [0.0000e+0 err.] pagerankMonolithic
+order: 8156349.8 size: 245419819 {} [63267.601 ms; 056 iters.] [5.1960e-6 err.] pagerankLevelwise
+order: 8156349.8 size: 245419819 {} [62846.328 ms; 055 iters.] [5.3907e-6 err.] pagerankLevelwise [dynamic]
+
+# Batch size 1e+8
+order: 8156353 size: 295418152.6 {} [48776.152 ms; 043 iters.] [0.0000e+0 err.] pagerankMonolithic
+order: 8156353 size: 295418152.6 {} [63677.599 ms; 043 iters.] [9.4060e-7 err.] pagerankLevelwise
+order: 8156353 size: 295418152.6 {} [63627.918 ms; 043 iters.] [9.4728e-7 err.] pagerankLevelwise [dynamic]

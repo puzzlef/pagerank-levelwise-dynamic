@@ -1,0 +1,18 @@
+Loading graph min-4SCC.mtx ...
+order: 21 size: 36 {}
+[00000.019 ms; 057 iters.] [0.0000e+0 err.] pagerankMonolithic
+
+# Batch size 1e+0
+order: 21 size: 36 {} [00000.016 ms; 046 iters.] [0.0000e+0 err.] pagerankMonolithic
+order: 21 size: 36 {} [00000.017 ms; 046 iters.] [8.7321e-7 err.] pagerankLevelwise
+order: 21 size: 36 {} [00000.017 ms; 047 iters.] [3.1274e-6 err.] pagerankLevelwise [dynamic]
+
+# Batch size 5e+0
+order: 21.8 size: 40.2 {} [00000.016 ms; 044 iters.] [0.0000e+0 err.] pagerankMonolithic
+order: 21.8 size: 40.2 {} [00000.017 ms; 044 iters.] [8.8178e-7 err.] pagerankLevelwise
+order: 21.8 size: 40.2 {} [00000.017 ms; 047 iters.] [2.0504e-6 err.] pagerankLevelwise [dynamic]
+
+# Batch size 1e+1
+order: 23 size: 45.4 {} [00000.017 ms; 044 iters.] [0.0000e+0 err.] pagerankMonolithic
+order: 23 size: 45.4 {} [00000.017 ms; 044 iters.] [9.0227e-7 err.] pagerankLevelwise
+order: 23 size: 45.4 {} [00000.019 ms; 047 iters.] [2.0776e-6 err.] pagerankLevelwise [dynamic]

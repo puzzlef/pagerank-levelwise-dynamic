@@ -1,0 +1,18 @@
+Loading graph min-NvgraphEx.mtx ...
+order: 7 size: 13 {}
+[00000.002 ms; 016 iters.] [0.0000e+0 err.] pagerankMonolithic
+
+# Batch size 1e+0
+order: 6.6 size: 12 {} [00000.002 ms; 022 iters.] [0.0000e+0 err.] pagerankMonolithic
+order: 6.6 size: 12 {} [00000.002 ms; 022 iters.] [6.5565e-7 err.] pagerankLevelwise
+order: 6.6 size: 12 {} [00000.003 ms; 028 iters.] [1.6265e-6 err.] pagerankLevelwise [dynamic]
+
+# Batch size 5e+0
+order: 6.6 size: 15.2 {} [00000.003 ms; 033 iters.] [0.0000e+0 err.] pagerankMonolithic
+order: 6.6 size: 15.2 {} [00000.003 ms; 033 iters.] [8.1286e-7 err.] pagerankLevelwise
+order: 6.6 size: 15.2 {} [00000.003 ms; 039 iters.] [1.9394e-6 err.] pagerankLevelwise [dynamic]
+
+# Batch size 1e+1
+order: 7 size: 17.4 {} [00000.003 ms; 032 iters.] [0.0000e+0 err.] pagerankMonolithic
+order: 7 size: 17.4 {} [00000.003 ms; 032 iters.] [8.0764e-7 err.] pagerankLevelwise
+order: 7 size: 17.4 {} [00000.003 ms; 032 iters.] [7.7412e-7 err.] pagerankLevelwise [dynamic]
