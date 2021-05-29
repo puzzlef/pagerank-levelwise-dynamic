@@ -1,0 +1,35 @@
+Using graph sx-askubuntu.txt ...
+Temporal edges: 964438
+order: 159312 size: 596918 {}
+
+# Batch size 1e+0
+[00046.953 ms; 045 iters.] [0.0000e+0 err.] pagerankStatic
+[00029.369 ms; 031 iters.] [1.5655e-6 err.] pagerankDynamic
+
+# Batch size 5e+0
+[00046.992 ms; 045 iters.] [0.0000e+0 err.] pagerankStatic
+[00027.322 ms; 027 iters.] [2.0085e-6 err.] pagerankDynamic
+
+# Batch size 1e+1
+[00047.127 ms; 045 iters.] [0.0000e+0 err.] pagerankStatic
+[00026.788 ms; 026 iters.] [2.3397e-6 err.] pagerankDynamic
+
+# Batch size 5e+1
+[00047.100 ms; 045 iters.] [0.0000e+0 err.] pagerankStatic
+[00028.665 ms; 027 iters.] [2.9094e-6 err.] pagerankDynamic
+
+# Batch size 1e+2
+[00047.181 ms; 045 iters.] [0.0000e+0 err.] pagerankStatic
+[00029.532 ms; 028 iters.] [3.1093e-6 err.] pagerankDynamic
+
+# Batch size 5e+2
+[00047.137 ms; 045 iters.] [0.0000e+0 err.] pagerankStatic
+[00029.925 ms; 029 iters.] [3.3710e-6 err.] pagerankDynamic
+
+# Batch size 1e+3
+[00047.187 ms; 045 iters.] [0.0000e+0 err.] pagerankStatic
+[00031.329 ms; 031 iters.] [3.4034e-6 err.] pagerankDynamic
+
+# Batch size 5e+3
+[00047.259 ms; 045 iters.] [0.0000e+0 err.] pagerankStatic
+[00034.673 ms; 034 iters.] [3.4211e-6 err.] pagerankDynamic

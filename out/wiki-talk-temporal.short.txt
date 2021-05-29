@@ -1,0 +1,43 @@
+Using graph wiki-talk-temporal.txt ...
+Temporal edges: 7833141
+order: 1140122 size: 3309560 {}
+
+# Batch size 1e+0
+[00145.774 ms; 037 iters.] [0.0000e+0 err.] pagerankStatic
+[00112.464 ms; 031 iters.] [1.2715e-6 err.] pagerankDynamic
+
+# Batch size 5e+0
+[00145.790 ms; 037 iters.] [0.0000e+0 err.] pagerankStatic
+[00110.568 ms; 030 iters.] [1.3874e-6 err.] pagerankDynamic
+
+# Batch size 1e+1
+[00145.986 ms; 037 iters.] [0.0000e+0 err.] pagerankStatic
+[00109.668 ms; 029 iters.] [1.4791e-6 err.] pagerankDynamic
+
+# Batch size 5e+1
+[00145.821 ms; 037 iters.] [0.0000e+0 err.] pagerankStatic
+[00100.273 ms; 026 iters.] [1.8195e-6 err.] pagerankDynamic
+
+# Batch size 1e+2
+[00145.955 ms; 037 iters.] [0.0000e+0 err.] pagerankStatic
+[00096.357 ms; 026 iters.] [2.0167e-6 err.] pagerankDynamic
+
+# Batch size 5e+2
+[00145.765 ms; 037 iters.] [0.0000e+0 err.] pagerankStatic
+[00081.129 ms; 023 iters.] [2.7370e-6 err.] pagerankDynamic
+
+# Batch size 1e+3
+[00145.967 ms; 037 iters.] [0.0000e+0 err.] pagerankStatic
+[00081.814 ms; 024 iters.] [3.1134e-6 err.] pagerankDynamic
+
+# Batch size 5e+3
+[00145.892 ms; 037 iters.] [0.0000e+0 err.] pagerankStatic
+[00088.834 ms; 026 iters.] [3.7657e-6 err.] pagerankDynamic
+
+# Batch size 1e+4
+[00145.822 ms; 037 iters.] [0.0000e+0 err.] pagerankStatic
+[00092.990 ms; 028 iters.] [3.9273e-6 err.] pagerankDynamic
+
+# Batch size 5e+4
+[00145.824 ms; 037 iters.] [0.0000e+0 err.] pagerankStatic
+[00111.822 ms; 032 iters.] [4.0021e-6 err.] pagerankDynamic

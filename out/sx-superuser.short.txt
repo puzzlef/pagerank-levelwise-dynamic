@@ -1,0 +1,39 @@
+Using graph sx-superuser.txt ...
+Temporal edges: 1443340
+order: 194081 size: 924864 {}
+
+# Batch size 1e+0
+[00063.391 ms; 044 iters.] [0.0000e+0 err.] pagerankStatic
+[00043.931 ms; 032 iters.] [1.5616e-6 err.] pagerankDynamic
+
+# Batch size 5e+0
+[00063.273 ms; 044 iters.] [0.0000e+0 err.] pagerankStatic
+[00041.115 ms; 028 iters.] [1.9628e-6 err.] pagerankDynamic
+
+# Batch size 1e+1
+[00063.320 ms; 044 iters.] [0.0000e+0 err.] pagerankStatic
+[00041.320 ms; 027 iters.] [2.2082e-6 err.] pagerankDynamic
+
+# Batch size 5e+1
+[00063.202 ms; 044 iters.] [0.0000e+0 err.] pagerankStatic
+[00041.660 ms; 028 iters.] [2.6874e-6 err.] pagerankDynamic
+
+# Batch size 1e+2
+[00063.250 ms; 044 iters.] [0.0000e+0 err.] pagerankStatic
+[00040.334 ms; 028 iters.] [2.9079e-6 err.] pagerankDynamic
+
+# Batch size 5e+2
+[00063.236 ms; 044 iters.] [0.0000e+0 err.] pagerankStatic
+[00039.123 ms; 029 iters.] [3.1443e-6 err.] pagerankDynamic
+
+# Batch size 1e+3
+[00063.260 ms; 044 iters.] [0.0000e+0 err.] pagerankStatic
+[00044.677 ms; 031 iters.] [3.0367e-6 err.] pagerankDynamic
+
+# Batch size 5e+3
+[00063.248 ms; 044 iters.] [0.0000e+0 err.] pagerankStatic
+[00048.650 ms; 033 iters.] [2.9752e-6 err.] pagerankDynamic
+
+# Batch size 1e+4
+[00063.240 ms; 044 iters.] [0.0000e+0 err.] pagerankStatic
+[00052.076 ms; 034 iters.] [2.9545e-6 err.] pagerankDynamic

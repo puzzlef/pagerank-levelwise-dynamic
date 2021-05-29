@@ -167,7 +167,7 @@ function processShortLog(data) {
     }
     a += '\n';
   }
-  return a;
+  return a.trim()+'\n';
 }
 
 
