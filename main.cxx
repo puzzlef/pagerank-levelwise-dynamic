@@ -10,63 +10,52 @@ using namespace std;
 
 
 
-template <class G, class H, class T>
-auto runPagerankCall(const char *name, const G& x, const H& xt, const vector<T> *init, const vector<T> *ranks=nullptr) {
-  int repeat = name? 5:1;
-  auto a = pagerankLevelwise(x, xt, init, {repeat});
-  auto e = absError(a.ranks, ranks? *ranks : a.ranks);
-  if (name) { print(xt); printf(" [%09.3f ms; %03d iters.] [%.4e err.] %s\n", a.time, a.iterations, e, name); }
-  return a;
-}
 
-
-void runPagerankBatch(const string& data, bool show, int skip, int batch) {
+void runPagerank(const string& data, int pre, int post, bool show) {
   vector<float>  ranksAdj;
   vector<float> *initStatic  = nullptr;
   vector<float> *initDynamic = &ranksAdj;
 
   DiGraph<> x;
   stringstream s(data);
-  while (true) {
-    // Skip some edges (to speed up execution)
-    if (!readSnapTemporal(x, s, skip)) break;
-    auto xt = transposeWithDegree(x);
-    auto a1 = runPagerankCall(nullptr, x, xt, initStatic);
-    auto ksOld    = vertices(x);
-    auto ranksOld = move(a1.ranks);
+  readSnapTemporal(x, s, pre);
+  auto xt  = transposeWithDegree(x);
+  auto a1  = pagerankLevelwise(x, xt, initStatic);
+  auto e1  = absError(a1.ranks, a1.ranks);
+  print(xt); printf(" [%09.3f ms; %03d iters.] [%.4e err.] pagerankStatic [pre]\n", a1.time, a1.iterations, e1);
+  auto xks    = vertices(x);
+  auto xranks = move(a1.ranks);
 
-    if (!readSnapTemporal(x, s, batch)) break;
-    xt = transposeWithDegree(x);
-    auto ks = vertices(x);
-    ranksAdj.resize(x.span());
+  auto y = copy(x);
+  readSnapTemporal(y, s, post);
+  auto yt  = transposeWithDegree(y);
+  auto yks = vertices(y);
+  ranksAdj.resize(y.span());
 
-    // Find static pagerank of updated graph.
-    auto a2 = runPagerankCall("pagerankStatic", x, xt, initStatic);
+  // Find static pagerank of updated graph.
+  auto a2  = pagerankLevelwise(y, yt, initStatic);
+  auto e2  = absError(a2.ranks, a2.ranks);
+  print(yt); printf(" [%09.3f ms; %03d iters.] [%.4e err.] pagerankStatic [post]\n", a2.time, a2.iterations, e2);
 
-    // Find dynamic pagerank, scaling old vertices, and using 1/N for new vertices.
-    adjustRanks(ranksAdj, ranksOld, ksOld, ks, 0.0f, float(ksOld.size())/ks.size(), 1.0f/ks.size());
-    auto a3 = runPagerankCall("pagerankDynamic", x, xt, initDynamic, &a2.ranks);
-  }
-}
+  // Find dynamic pagerank of updated graph.
+  auto a3  = pagerankLevelwise(y, yt, initDynamic);
+  auto e3  = absError(a3.ranks, a2.ranks);
+  print(yt); printf(" [%09.3f ms; %03d iters.] [%.4e err.] pagerankDynamic [post]\n", a3.time, a3.iterations, e3);
 
-
-void runPagerank(const string& data, bool show) {
-  int M = countLines(data), steps = 100;
-  printf("Temporal edges: %d\n\n", M);
-  for (int batch=1, i=0; batch<M; batch*=i&1? 2:5, i++) {
-    int skip = max(M/steps - batch, 0);
-    printf("# Batch size %.0e\n", (double) batch);
-    runPagerankBatch(data, show, skip, batch);
-    printf("\n");
-  }
+  // Find dynamic pagerank of updated graph, skipping unchanged components.
+  auto a4  = pagerankLevelwiseSkip(x, xt, y, yt, initDynamic);
+  auto e4  = absError(a4.ranks, a2.ranks);
+  print(yt); printf(" [%09.3f ms; %03d iters.] [%.4e err.] pagerankDynamicSkip [post]\n", a4.time, a4.iterations, e4);
 }
 
 
 int main(int argc, char **argv) {
   char *file = argv[1];
-  bool  show = argc > 2;
+  int   pre  = stoi(argv[2]);
+  int   post = stoi(argv[3]);
+  bool  show = argc > 4;
   printf("Using graph %s ...\n", file);
   string d = readFile(file);
-  runPagerank(d, show);
+  runPagerank(d, pre, post, show);
   return 0;
 }
