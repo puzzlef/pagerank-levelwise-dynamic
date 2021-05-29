@@ -42,9 +42,7 @@ int pagerankLevelwiseLoop(vector<T>& a, vector<T>& r, vector<T>& c, const vector
   int v = 0; float l = 0;
   for (int n : ns) {
     if (n<0) { v += -n; continue; }
-    printf("pagerankLevelwiseLoop v: %d n: %d, N: %d\n", v, n, N);
     l += pagerankMonolithicLoop(a, r, c, f, vfrom, efrom, vdata, v, v+n, N, p, E * (float(n)/N), L) * (float(n)/N);
-    printf("pagerankLevelwiseLoop l: %f\n", l);
     swap(a, r);
     v += n;
   }
@@ -80,10 +78,6 @@ PagerankResult<T> pagerankLevelwise(const G& w, const H& wt, const G& x, const H
     fill(a, T());
     if (q) copy(r, qc);
     else fill(r, T(1)/N);
-    printf("vdata: "); println(vdata);
-    printf("ns: "); println(ns);
-    printf("ks: "); println(ks);
-    printf("r: "); println(r);
     mark([&] { pagerankFactor(f, vfrom, efrom, vdata, 0, N, N, p); multiply(c, r, f); copy(a, r); });
     mark([&] { l = pagerankLevelwiseLoop(a, r, c, f, vfrom, efrom, vdata, ns, N, p, E, L); });
   }, o.repeat);
