@@ -11,63 +11,58 @@ using namespace std;
 
 
 
-void runPagerank(const string& data, int pre, int post, bool show) {
+template <class F, class T=float>
+auto runCall(bool show, const char *name, F fn, const vector<T> *ranks=nullptr) {
+  auto a = fn(); auto e = absError(a.ranks, ranks? *ranks : a.ranks);
+  if (name) { printf("[%09.3f ms; %03d iters.] [%.4e err.] %s\n", a.time, a.iterations, e, name); }
+  if (show) { println(a.ranks); printf("\n"); }
+  return a;
+}
+
+
+void runPagerank(const string& data, int original, int update, bool show) {
   vector<float>  ranksAdj;
   vector<float> *initStatic  = nullptr;
   vector<float> *initDynamic = &ranksAdj;
 
-  DiGraph<> x;
+  DiGraph<> w;
   stringstream s(data);
-  readSnapTemporal(x, s, pre); println(x, true);
+
+  // Find static pagerank of original graph.
+  readSnapTemporal(w, s, original);
+  printf("original-graph: "); println(w, true); printf("\n");
+  auto wt = transposeWithDegree(w);
+  auto a1 = runCall(show, "pagerankStatic", [&] { return pagerankLevelwise(w, wt, initStatic); });
+  auto ksOld    = vertices(w);
+  auto ranksOld = move(a1.ranks);
+
+  // Load new edges for updated graph.
+  auto x = copy(w);
+  readSnapTemporal(x, s, update);
+  printf("updated-graph: "); println(x, true); printf("\n");
   auto xt  = transposeWithDegree(x);
-  auto a1  = pagerankLevelwise(x, xt, initStatic);
-  auto e1  = absError(a1.ranks, a1.ranks);
-  print(xt); printf(" [%09.3f ms; %03d iters.] [%.4e err.] pagerankStatic [pre]\n", a1.time, a1.iterations, e1);
-  if (show) println(a1.ranks);
+  auto ks  = vertices(x);
+  ranksAdj.resize(x.span());
 
-  auto xks    = vertices(x);
-  auto xranks = move(a1.ranks);
+  // Find static pagerank of post-graph.
+  auto a2 = runCall(show, "pagerankStatic", [&] { return pagerankLevelwise(x, xt, initStatic); });
 
-  auto y = copy(x);
-  readSnapTemporal(y, s, post); println(y, true);
-  auto yt  = transposeWithDegree(y);
-  auto yks = vertices(y);
-  ranksAdj.resize(y.span());
+  // Find dynamic pagerank of post-graph.
+  adjustRanks(ranksAdj, ranksOld, ksOld, ks, 0.0f, float(ksOld.size())/ks.size(), 1.0f/ks.size());
+  auto a3 = runCall(show, "pagerankDynamic", [&] { return pagerankLevelwise(x, xt, initDynamic); }, &a2.ranks);
 
-  // Find static pagerank of updated graph.
-  auto a5  = pagerankMonolithic(yt, initStatic);
-  auto e5  = absError(a5.ranks, a5.ranks);
-  print(yt); printf(" [%09.3f ms; %03d iters.] [%.4e err.] pagerankMono [post]\n", a5.time, a5.iterations, e5);
-  if (show) println(a5.ranks);
-
-  // Find static pagerank of updated graph.
-  auto a2  = pagerankLevelwise(y, yt, initStatic);
-  auto e2  = absError(a2.ranks, a2.ranks);
-  print(yt); printf(" [%09.3f ms; %03d iters.] [%.4e err.] pagerankStatic [post]\n", a2.time, a2.iterations, e2);
-  if (show) println(a2.ranks);
-
-  // Find dynamic pagerank of updated graph.
-  adjustRanks(ranksAdj, xranks, xks, yks, 0.0f, float(xks.size())/yks.size(), 1.0f/yks.size());
-  auto a3  = pagerankLevelwise(y, yt, initDynamic);
-  auto e3  = absError(a3.ranks, a2.ranks);
-  print(yt); printf(" [%09.3f ms; %03d iters.] [%.4e err.] pagerankDynamic [post]\n", a3.time, a3.iterations, e3);
-  if (show) println(a3.ranks);
-
-  // Find dynamic pagerank of updated graph, skipping unchanged components.
-  auto a4  = pagerankLevelwise(x, xt, y, yt, initDynamic);
-  auto e4  = absError(a4.ranks, a2.ranks);
-  print(yt); printf(" [%09.3f ms; %03d iters.] [%.4e err.] pagerankDynamicSkip [post]\n", a4.time, a4.iterations, e4);
-  if (show) println(a4.ranks);
+  // Find dynamic pagerank of post-graph, skipping unchanged components.
+  auto a4 = runCall(show, "pagerankDynamic [skip-comp]", [&] { return pagerankLevelwise(w, wt, x, xt, initDynamic); }, &a2.ranks);
 }
 
 
 int main(int argc, char **argv) {
   char *file = argv[1];
-  int   pre  = stoi(argv[2]);
-  int   post = stoi(argv[3]);
-  bool  show = argc > 4;
+  int   original = stoi(argv[2]);
+  int   update   = stoi(argv[3]);
+  bool  show     = argc > 4;
   printf("Using graph %s ...\n", file);
   string d = readFile(file);
-  runPagerank(d, pre, post, show);
+  runPagerank(d, original, update, show);
   return 0;
 }
