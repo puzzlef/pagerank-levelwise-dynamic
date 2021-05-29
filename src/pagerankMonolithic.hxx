@@ -38,11 +38,18 @@ void pagerankCalculate(vector<T>& a, const vector<T>& c, const vector<int>& vfro
 template <class T>
 int pagerankMonolithicLoop(vector<T>& a, vector<T>& r, vector<T>& c, const vector<T>& f, const vector<int>& vfrom, const vector<int>& efrom, const vector<int>& vdata, int v, int V, int N, T p, T E, int L) {
   int l = 1;
+  printf("a: "); println(a);
+  printf("r: "); println(r);
+  printf("f: "); println(f);
   for (; l<L; l++) {
     T c0 = pagerankTeleport(r, vfrom, efrom, vdata, v, V, N, p);
     multiply(c, r, f, v, V-v);
+    printf("c0: %f\n", c0);
+    printf("c: "); println(c);
     pagerankCalculate(a, c, vfrom, efrom, vdata, v, V, N, c0);
+    printf("a: "); println(a);
     T el = absError(a, r, v, V-v);
+    printf("el: %f E: %f\n", el, E);
     if (el < E) break;
     swap(a, r);
   }

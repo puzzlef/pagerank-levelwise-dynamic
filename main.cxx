@@ -18,34 +18,46 @@ void runPagerank(const string& data, int pre, int post, bool show) {
 
   DiGraph<> x;
   stringstream s(data);
-  readSnapTemporal(x, s, pre);
+  readSnapTemporal(x, s, pre); println(x, true);
   auto xt  = transposeWithDegree(x);
   auto a1  = pagerankLevelwise(x, xt, initStatic);
   auto e1  = absError(a1.ranks, a1.ranks);
   print(xt); printf(" [%09.3f ms; %03d iters.] [%.4e err.] pagerankStatic [pre]\n", a1.time, a1.iterations, e1);
+  if (show) println(a1.ranks);
+
   auto xks    = vertices(x);
   auto xranks = move(a1.ranks);
 
   auto y = copy(x);
-  readSnapTemporal(y, s, post);
+  readSnapTemporal(y, s, post); println(y, true);
   auto yt  = transposeWithDegree(y);
   auto yks = vertices(y);
   ranksAdj.resize(y.span());
 
   // Find static pagerank of updated graph.
+  auto a5  = pagerankMonolithic(yt, initStatic);
+  auto e5  = absError(a5.ranks, a5.ranks);
+  print(yt); printf(" [%09.3f ms; %03d iters.] [%.4e err.] pagerankMono [post]\n", a5.time, a5.iterations, e5);
+  if (show) println(a5.ranks);
+
+  // Find static pagerank of updated graph.
   auto a2  = pagerankLevelwise(y, yt, initStatic);
   auto e2  = absError(a2.ranks, a2.ranks);
   print(yt); printf(" [%09.3f ms; %03d iters.] [%.4e err.] pagerankStatic [post]\n", a2.time, a2.iterations, e2);
+  if (show) println(a2.ranks);
 
   // Find dynamic pagerank of updated graph.
+  adjustRanks(ranksAdj, xranks, xks, yks, 0.0f, float(xks.size())/yks.size(), 1.0f/yks.size());
   auto a3  = pagerankLevelwise(y, yt, initDynamic);
   auto e3  = absError(a3.ranks, a2.ranks);
   print(yt); printf(" [%09.3f ms; %03d iters.] [%.4e err.] pagerankDynamic [post]\n", a3.time, a3.iterations, e3);
+  if (show) println(a3.ranks);
 
   // Find dynamic pagerank of updated graph, skipping unchanged components.
-  auto a4  = pagerankLevelwiseSkip(x, xt, y, yt, initDynamic);
+  auto a4  = pagerankLevelwise(x, xt, y, yt, initDynamic);
   auto e4  = absError(a4.ranks, a2.ranks);
   print(yt); printf(" [%09.3f ms; %03d iters.] [%.4e err.] pagerankDynamicSkip [post]\n", a4.time, a4.iterations, e4);
+  if (show) println(a4.ranks);
 }
 
 
