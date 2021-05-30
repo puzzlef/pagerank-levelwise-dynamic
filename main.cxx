@@ -11,12 +11,18 @@ using namespace std;
 
 
 template <class G, class H, class T>
-auto runPagerankCall(const char *name, const G& x, const H& xt, const vector<T> *init, const vector<T> *ranks=nullptr) {
+auto runPagerankCall(const char *name, const G& w, const H& wt, const G& x, const H& xt, const vector<T> *init, const vector<T> *ranks=nullptr) {
   int repeat = name? 5:1;
-  auto a = pagerankLevelwise(x, xt, init, {repeat});
+  auto a = pagerankLevelwise(w, wt, x, xt, init, {repeat});
   auto e = absError(a.ranks, ranks? *ranks : a.ranks);
   if (name) { print(xt); printf(" [%09.3f ms; %03d iters.] [%.4e err.] %s\n", a.time, a.iterations, e, name); }
   return a;
+}
+
+template <class G, class H, class T>
+auto runPagerankCall(const char *name, const G& x, const H& xt, const vector<T> *init, const vector<T> *ranks=nullptr) {
+  DiGraph<> w; DiGraph<int> wt;
+  return runPagerankCall(name, w, wt, x, xt, init, ranks);
 }
 
 
@@ -35,17 +41,19 @@ void runPagerankBatch(const string& data, bool show, int skip, int batch) {
     auto ksOld    = vertices(x);
     auto ranksOld = move(a1.ranks);
 
-    if (!readSnapTemporal(x, s, batch)) break;
-    xt = transposeWithDegree(x);
-    auto ks = vertices(x);
-    ranksAdj.resize(x.span());
+    auto y = copy(x);
+    if (!readSnapTemporal(y, s, batch)) break;
+    auto yt = transposeWithDegree(y);
+    auto ks = vertices(y);
+    ranksAdj.resize(y.span());
 
     // Find static pagerank of updated graph.
-    auto a2 = runPagerankCall("pagerankStatic", x, xt, initStatic);
+    auto a2 = runPagerankCall("pagerankStatic", y, yt, initStatic);
 
-    // Find dynamic pagerank, scaling old vertices, and using 1/N for new vertices.
+    // Find dynamic pagerank, with skip-comp and scaled-fill.
     adjustRanks(ranksAdj, ranksOld, ksOld, ks, 0.0f, float(ksOld.size())/ks.size(), 1.0f/ks.size());
-    auto a3 = runPagerankCall("pagerankDynamic", x, xt, initDynamic, &a2.ranks);
+    auto a3 = runPagerankCall("pagerankDynamic", x, xt, y, yt, initDynamic, &a2.ranks);
+    x = move(y);
   }
 }
 
