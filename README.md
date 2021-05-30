@@ -1,52 +1,51 @@
 Checking for correctness of [levelwise] PageRank when unchanged components are
 skipped ([pull], [CSR], [scaled-fill]).
 
-A simple temporal graph [min1c1l](data/min1c1l.txt) was taken to check for
-validity of the idea that an **unchanged component** can simply be **skipped**
-from pagerank computation, after all old ranks have been *scaled*, and new
-ranks are initialized to *1/N*. The *temporal graph* initially has 2 vertices
-pointing to each other, and so initial ranks are `0.5` each. The updated graph
-has a new vertex `3` which is pointed by `2` and itself (levelwise pagerank
-algorithm does not work is a graph has dead-ends, causing teleports). If we
-skip the unchanged components, i.e., `[1, 2]` with scaled ranks `0.33` each,
-and run pagerank on `3` only, its final ranks comes to be `1.2777`, which is
-**incorrect**. This shows that simply skipping unchanged components is not
-correct (one counter example is sufficient).
+3 simple temporal graphs were taken to check for validity of the idea that an
+**unchanged component** can simply be **skipped** from pagerank computation,
+after all old ranks have been *scaled*, and new ranks are initialized to
+*1/N*. Here, an *unchanged component* means that not a single edge within the
+component has been altered. From the 3 examples taken, it appears that
+*unchanged components* can indeed be skipped. I intially considered this to be
+incorrect because my original component equality check simply compared the
+vertices, and not the edges.
 
-Output is saved in [out/](out/) and is listed here. The drawing for `minc1l1`
-is below.
-
-[![](https://i.imgur.com/tjoPesM.jpg)](drawings/min1c1l.jpeg)
+Output is saved in [out](out/) and a part of it is listed here. Input graphs
+are in [data](data/), with [drawings](drawings/).
 
 <br>
 
 ```bash
 $ g++ -O3 main.cxx
-$ ./a.out data/min1c1l.txt 2 2 true
+$ ./a.out data/min2c1l.txt 5 2 true
 
-# Using graph data/min1c1l.txt ...
-# original-graph: order: 2 size: 2 {
-#   1 -> 2
-#   2 -> 1
-# }
-#
-# [00000.000 ms; 001 iters.] [0.0000e+00 err.] pagerankStatic
-# { 0 0.5 0.5 }
-#
-# updated-graph: order: 3 size: 4 {
+# Using graph data/min2c1l.txt ...
+# original-graph: order: 4 size: 5 {
 #   1 -> 2
 #   2 -> 1 3
-#   3 -> 3
+#   3 -> 4
+#   4 -> 3
 # }
 #
-# [00000.004 ms; 042 iters.] [0.0000e+00 err.] pagerankStatic
-# { 0 0.111546 0.144814 0.743641 }
+# [00000.005 ms; 049 iters.] [0.0000e+00 err.] pagerankStatic
+# { 0 0.0836598 0.108611 0.41634 0.391389 }
 #
-# [00000.004 ms; 042 iters.] [0.0000e+00 err.] pagerankDynamic
-# { 0 0.111546 0.144814 0.743641 }
+# updated-graph: order: 5 size: 7 {
+#   1 -> 2
+#   2 -> 1 3
+#   3 -> 4
+#   4 -> 3 5
+#   5 -> 5
+# }
 #
-# [00000.003 ms; 027 iters.] [9.4444e-01 err.] pagerankDynamic [skip-comp]
-# { 0 0.333333 0.333333 1.27778 }
+# [00000.005 ms; 036 iters.] [0.0000e+00 err.] pagerankStatic
+# { 0 0.0669278 0.0868886 0.124741 0.13603 0.585416 }
+#
+# [00000.004 ms; 027 iters.] [1.1846e-06 err.] pagerankDynamic
+# { 0 0.0669277 0.0868886 0.12474 0.136029 0.585415 }
+#
+# [00000.004 ms; 026 iters.] [1.0282e-06 err.] pagerankDynamic [skip-comp]
+# { 0 0.0669278 0.0868886 0.12474 0.136029 0.585415 }
 ```
 
 <br>
@@ -61,7 +60,7 @@ $ ./a.out data/min1c1l.txt 2 2 true
 <br>
 <br>
 
-[![](https://i.imgur.com/tCdIBkh.png)](https://www.youtube.com/watch?v=CefQiC3ZE0E)
+[![](https://i.imgur.com/mJoiKnM.jpg)](https://www.youtube.com/watch?v=J3sfsP9W048)
 
 [levelwise]: https://github.com/puzzlef/pagerank-monolithic-vs-levelwise
 [pull]: https://github.com/puzzlef/pagerank-push-vs-pull

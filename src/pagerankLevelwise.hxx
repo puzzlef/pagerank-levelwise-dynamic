@@ -26,11 +26,11 @@ auto pagerankComponents(const G& x, const H& xt, const PagerankOptions<T>& o) {
 }
 
 
-template <class C>
-auto pagerankComponentSizes(const C& wcs, const C& xcs) {
+template <class G, class C>
+auto pagerankComponentSizes(const G& w, const C& wcs, const G& x, const C& xcs) {
   vector<int> a; bool fail = false;
   for (int i=0, W=wcs.size(), X=xcs.size(); i<X; i++) {
-    if (!fail && i<W && wcs[i]==xcs[i]) a.push_back(-xcs[i].size());
+    if (!fail && i<W && componentsEqual(w, wcs[i], x, xcs[i])) a.push_back(-xcs[i].size());
     else { a.push_back(xcs[i].size()); fail = true; }
   }
   return a;
@@ -67,7 +67,7 @@ PagerankResult<T> pagerankLevelwise(const G& w, const H& wt, const G& x, const H
   int  N = xt.order();
   auto wcs = pagerankComponents(w, wt, o);
   auto xcs = pagerankComponents(x, xt, o);
-  auto ns = pagerankComponentSizes(wcs, xcs);
+  auto ns = pagerankComponentSizes(w, wcs, x, xcs);
   auto ks = join(xcs);
   auto vfrom = sourceOffsets(xt, ks);
   auto efrom = destinationIndices(xt, ks);

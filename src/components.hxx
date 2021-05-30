@@ -48,3 +48,17 @@ auto componentIds(const G& x, const vector<vector<int>>& comps) {
   }
   return a;
 }
+
+
+
+
+// COMPONENTS-EQUAL
+// ----------------
+
+template <class G>
+bool componentsEqual(const G& x, const vector<int>& xc, const G& y, const vector<int>& yc) {
+  if (xc != yc) return false;
+  for (int i=0, I=xc.size(); i<I; i++)
+    if (!verticesEqual(x, xc[i], y, yc[i])) return false;
+  return true;
+}
