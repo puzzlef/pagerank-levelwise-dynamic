@@ -142,11 +142,10 @@ void eraseIndex(vector<T>& x, int i, int I) {
 template <class T, class F>
 auto joinIf(const vector<vector<T>>& xs, F fn) {
   vector<vector<T>> a;
-  a.push_back(vector<T>());
   for (const auto& x : xs) {
     auto& b = a.back();
-    if (fn(b, x)) b.insert(b.end(), x.begin(), x.end());
-    else a.push_back(x);
+    if (a.empty() || !fn(b, x)) a.push_back(x);
+    else b.insert(b.end(), x.begin(), x.end());
   }
   return a;
 }

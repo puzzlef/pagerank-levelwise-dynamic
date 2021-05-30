@@ -9,8 +9,8 @@ using namespace std;
 
 
 
-template <class G>
-void runPagerankBatch(const G& x, const vector<float>& ranksOld, int batch) {
+template <class G, class H>
+void runPagerankBatch(const G& x, const H& xt, const vector<float>& ranksOld, int batch) {
   int repeat = 5, minComponentSize = 50;
   int span = int(1.1 * x.span());
   vector<float> ranksAdj;
@@ -35,17 +35,22 @@ void runPagerankBatch(const G& x, const vector<float>& ranksOld, int batch) {
   // Find static pagerank using standard algorithm.
   auto a1 = pagerankMonolithic(yt, initStatic, {repeat});
   auto e1 = absError(a1.ranks, a1.ranks);
-  print(y); printf(" [%09.3f ms; %03d iters.] [%.4e err.] pagerankMonolithic\n", a1.time, a1.iterations, e1);
+  print(y); printf(" [%09.3f ms; %03d iters.] [%.4e err.] pagerankStatic [monolithic]\n", a1.time, a1.iterations, e1);
 
-  // Find static pagerank component-wise in topologically-ordered fashion (levelwise).
+  // Find static pagerank using levelwise algorithm.
   auto a2 = pagerankLevelwise(y, yt, initStatic, {repeat, minComponentSize});
   auto e2 = absError(a2.ranks, a1.ranks);
-  print(y); printf(" [%09.3f ms; %03d iters.] [%.4e err.] pagerankLevelwise\n", a2.time, a2.iterations, e2);
+  print(y); printf(" [%09.3f ms; %03d iters.] [%.4e err.] pagerankStatic [levelwise]\n", a2.time, a2.iterations, e2);
 
-  // Find dynamic pagerank component-wise in topologically-ordered fashion (levelwise).
+  // Find dynamic pagerank using levelwise algorithm.
   auto a3 = pagerankLevelwise(y, yt, initDynamic, {repeat, minComponentSize});
   auto e3 = absError(a3.ranks, a1.ranks);
-  print(y); printf(" [%09.3f ms; %03d iters.] [%.4e err.] pagerankLevelwise [dynamic]\n", a3.time, a3.iterations, e3);
+  print(y); printf(" [%09.3f ms; %03d iters.] [%.4e err.] pagerankDynamic [levelwise]\n", a3.time, a3.iterations, e3);
+
+  // Find dynamic pagerank using levelwise algorithm, and skip unchanged components.
+  auto a4 = pagerankLevelwise(x, xt, y, yt, initDynamic, {repeat, minComponentSize});
+  auto e4 = absError(a4.ranks, a1.ranks);
+  print(y); printf(" [%09.3f ms; %03d iters.] [%.4e err.] pagerankDynamic [levelwise; skip-comp]\n", a4.time, a4.iterations, e4);
 }
 
 
@@ -64,7 +69,7 @@ void runPagerank(const G& x, const H& xt, bool show) {
   for (int batch=1, i=0; batch<x.size(); batch*=i&1? 2:5, i++) {
     printf("# Batch size %.0e\n", (double) batch);
     for (int repeat=0; repeat<5; repeat++)
-      runPagerankBatch(x, a1.ranks, batch);
+      runPagerankBatch(x, xt, a1.ranks, batch);
     printf("\n");
   }
 }
