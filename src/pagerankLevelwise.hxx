@@ -26,13 +26,20 @@ auto pagerankComponents(const G& x, const H& xt, const PagerankOptions<T>& o) {
 }
 
 
-template <class G, class C>
-auto pagerankComponentSizes(const G& w, const C& wcs, const G& x, const C& xcs) {
-  vector<int> a; bool fail = false;
-  for (int i=0, W=wcs.size(), X=xcs.size(); i<X; i++) {
-    if (!fail && i<W && componentsEqual(w, wcs[i], x, xcs[i])) a.push_back(-xcs[i].size());
-    else { a.push_back(xcs[i].size()); fail = true; }
+template <class G, class H, class C>
+auto pagerankComponentSizes(const G& w, const H& wt, const C& wcs, const G& x, const H& xt, const C& xcs) {
+  int W = wcs.size();
+  int X = xcs.size();
+  auto b = blockgraph(x, xcs);
+  vector<bool> dirty(X);
+  for (int u : b.vertices()) {
+    if (dirty[u]) continue;
+    if (findIndex(wcs, xcs[u])>=0 && componentsEqual(wt, xcs[u], xt, xcs[u])) continue;
+    dfsDo(b, u, [&](int v) { dirty[v] = true; });
   }
+  vector<int> a(X);
+  for (int i=0; i<X; i++)
+    a[i] = dirty[i]? xcs[i].size() : -xcs[i].size();
   return a;
 }
 
@@ -67,7 +74,7 @@ PagerankResult<T> pagerankLevelwise(const G& w, const H& wt, const G& x, const H
   int  N = xt.order();
   auto wcs = pagerankComponents(w, wt, o);
   auto xcs = pagerankComponents(x, xt, o);
-  auto ns = pagerankComponentSizes(w, wcs, x, xcs);
+  auto ns = pagerankComponentSizes(w, wt, wcs, x, xt, xcs);
   auto ks = join(xcs);
   auto vfrom = sourceOffsets(xt, ks);
   auto efrom = destinationIndices(xt, ks);
