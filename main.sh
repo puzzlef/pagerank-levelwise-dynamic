@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-src="pagerank-levelwise-skip-unchanged-components"
+src="pagerank-levelwise-dynamic-skip-unchanged-components"
 out="/home/resources/Documents/subhajit/$src.log"
 ulimit -s unlimited
 printf "" > "$out"
@@ -11,6 +11,10 @@ cd $src
 
 # Run
 g++ -O3 main.cxx
-stdbuf --output=L ./a.out data/min1c1l.txt 2 2 true  2>&1 | tee -a "$out"
-stdbuf --output=L ./a.out data/min2c1l.txt 5 2 true  2>&1 | tee -a "$out"
-stdbuf --output=L ./a.out data/min3c3l.txt 13 5 true 2>&1 | tee -a "$out"
+stdbuf --output=L ./a.out ~/data/email-Eu-core-temporal.txt 2>&1 | tee -a "$out"
+stdbuf --output=L ./a.out ~/data/CollegeMsg.txt             2>&1 | tee -a "$out"
+stdbuf --output=L ./a.out ~/data/sx-mathoverflow.txt        2>&1 | tee -a "$out"
+stdbuf --output=L ./a.out ~/data/sx-askubuntu.txt           2>&1 | tee -a "$out"
+stdbuf --output=L ./a.out ~/data/sx-superuser.txt           2>&1 | tee -a "$out"
+stdbuf --output=L ./a.out ~/data/wiki-talk-temporal.txt     2>&1 | tee -a "$out"
+stdbuf --output=L ./a.out ~/data/sx-stackoverflow.txt       2>&1 | tee -a "$out"
