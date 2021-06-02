@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-src="pagerank-levelwise-dynamic-skip-unchanged-components-with-mtx"
+src="pagerank-levelwise-dynamic-skip-unchanged-components-with-mtx-insertions"
 out="/home/resources/Documents/subhajit/$src.log"
 ulimit -s unlimited
 printf "" > "$out"
