@@ -34,7 +34,7 @@ auto pagerankComponentSizes(const G& w, const H& wt, const C& wcs, const G& x, c
   vector<bool> dirty(X);
   for (int u : b.vertices()) {
     if (dirty[u]) continue;
-    if (findIndex(wcs, xcs[u])>=0 && componentsEqual(wt, xcs[u], xt, xcs[u])) continue;
+    if (findIndex(wcs, xcs[u])>=0 && componentsEqual(w, wt, xcs[u], x, xt, xcs[u])) continue;
     dfsDo(b, u, [&](int v) { dirty[v] = true; });
   }
   vector<int> a(X);
