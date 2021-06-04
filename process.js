@@ -1,5 +1,6 @@
 const fs = require('fs');
 const os = require('os');
+const path = require('path');
 
 const RGRAPH = /^Loading graph .*\/(.+?)\.mtx \.\.\./m;
 const RORDER = /^order: (\d+) size: (\d+) \{\}$/m;
@@ -183,14 +184,25 @@ function processShortLog(data) {
 
 function main(cmd, log, out) {
   var data = readLog(log);
+  if (!path.extname(out)) cmd += '-dir';
   switch (cmd) {
     case 'csv':
       var rows = processCsv(data);
       writeCsv(out, rows);
       break;
+    case 'csv-dir':
+      for (var [graph, rows] of data)
+        writeCsv(path.join(out, graph+'.csv'), rows);
+      break;
     case 'short-csv':
       var rows = processShortCsv(data);
       writeCsv(out, rows);
+      break;
+    case 'short-csv-dir':
+      for (var [graph, rows] of data) {
+        var rows = processShortCsv(new Map([[graph, rows]]));
+        writeCsv(path.join(out, graph+'.csv'), rows);
+      }
       break;
     case 'short-log':
       var text = processShortLog(data);
