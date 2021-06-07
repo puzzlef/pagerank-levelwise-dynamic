@@ -22,6 +22,7 @@ void runPagerankBatch(const string& data, bool show, int skip, int batch) {
   while (true) {
     // Skip some edges (to speed up execution)
     if (!readSnapTemporal(x, s, skip)) break;
+    loopDeadEnds(x);
     auto xt = transposeWithDegree(x);
     auto a1 = pagerankLevelwise(x, xt);
     auto ksOld    = vertices(x);
@@ -30,6 +31,7 @@ void runPagerankBatch(const string& data, bool show, int skip, int batch) {
     // Read edges for this batch.
     auto y = copy(x);
     if (!readSnapTemporal(y, s, batch)) break;
+    loopDeadEnds(y);
     auto yt = transposeWithDegree(y);
     auto ks = vertices(y);
     ranksAdj.resize(y.span());
@@ -56,12 +58,11 @@ void runPagerankBatch(const string& data, bool show, int skip, int batch) {
 
 void runPagerank(const string& data, bool show) {
   int M = countLines(data), steps = 100;
-  printf("Temporal edges: %d\n\n", M);
+  printf("Temporal edges: %d\n", M);
   for (int batch=1, i=0; batch<M; batch*=i&1? 2:5, i++) {
     int skip = max(M/steps - batch, 0);
-    printf("# Batch size %.0e\n", (double) batch);
+    printf("\n# Batch size %.0e\n", (double) batch);
     runPagerankBatch(data, show, skip, batch);
-    printf("\n");
   }
 }
 
@@ -72,5 +73,6 @@ int main(int argc, char **argv) {
   printf("Using graph %s ...\n", file);
   string d = readFile(file);
   runPagerank(d, show);
+  printf("\n");
   return 0;
 }
