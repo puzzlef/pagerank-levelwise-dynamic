@@ -22,6 +22,7 @@ void runPagerankBatch(const string& data, bool show, int skip, int batch) {
   while (true) {
     // Skip some edges (to speed up execution)
     if (!readSnapTemporal(x, s, skip)) break;
+    loopDeadEnds(x);
     auto xt = transposeWithDegree(x);
     auto a1 = pagerankLevelwise(x, xt);
     auto ksOld    = vertices(x);
@@ -30,25 +31,26 @@ void runPagerankBatch(const string& data, bool show, int skip, int batch) {
     // Read edges for this batch.
     auto y = copy(x);
     if (!readSnapTemporal(y, s, batch)) break;
+    loopDeadEnds(y);
     auto yt = transposeWithDegree(y);
     auto ks = vertices(y);
     ranksAdj.resize(y.span());
 
-    // Find static pagerank of updated graph.
-    auto a2 = pagerankLevelwise(y, yt, initStatic, {repeat});
+    // Find static pagerank using standard algorithm.
+    auto a2 = pagerankMonolithic(yt, initStatic, {repeat});
     auto e2 = l1Norm(a2.ranks, a2.ranks);
-    print(yt); printf(" [%09.3f ms; %03d iters.] [%.4e err.] pagerankStatic\n", a2.time, a2.iterations, e2);
+    print(yt); printf(" [%09.3f ms; %03d iters.] [%.4e err.] pagerankMonolithic [static]\n", a2.time, a2.iterations, e2);
 
-    // Find dynamic pagerank, with scaled-fill.
-    adjustRanks(ranksAdj, ranksOld, ksOld, ks, 0.0f, float(ksOld.size())/ks.size(), 1.0f/ks.size());
-    auto a3 = pagerankLevelwise(y, yt, initDynamic, {repeat});
+    // Find static pagerank using levelwise algorithm.
+    auto a3 = pagerankLevelwise(y, yt, initStatic, {repeat});
     auto e3 = l1Norm(a3.ranks, a2.ranks);
-    print(yt); printf(" [%09.3f ms; %03d iters.] [%.4e err.] pagerankDynamic\n", a3.time, a3.iterations, e3);
+    print(yt); printf(" [%09.3f ms; %03d iters.] [%.4e err.] pagerankLevelwise [static]\n", a3.time, a3.iterations, e3);
 
-    // Find dynamic pagerank, with skip-comp and scaled-fill.
+    // Find dynamic pagerank using levelwise algorithm, with skip-comp and scaled-fill.
+    adjustRanks(ranksAdj, ranksOld, ksOld, ks, 0.0f, float(ksOld.size())/ks.size(), 1.0f/ks.size());
     auto a4 = pagerankLevelwise(x, xt, y, yt, initDynamic, {repeat});
     auto e4 = l1Norm(a4.ranks, a2.ranks);
-    print(yt); printf(" [%09.3f ms; %03d iters.] [%.4e err.] pagerankDynamic [skip-comp]\n", a4.time, a4.iterations, e4);
+    print(yt); printf(" [%09.3f ms; %03d iters.] [%.4e err.] pagerankLevelwise [dynamic]\n", a4.time, a4.iterations, e4);
     x = move(y);
   }
 }
@@ -56,12 +58,11 @@ void runPagerankBatch(const string& data, bool show, int skip, int batch) {
 
 void runPagerank(const string& data, bool show) {
   int M = countLines(data), steps = 100;
-  printf("Temporal edges: %d\n\n", M);
+  printf("Temporal edges: %d\n", M);
   for (int batch=1, i=0; batch<M; batch*=i&1? 2:5, i++) {
     int skip = max(M/steps - batch, 0);
-    printf("# Batch size %.0e\n", (double) batch);
+    printf("\n# Batch size %.0e\n", (double) batch);
     runPagerankBatch(data, show, skip, batch);
-    printf("\n");
   }
 }
 
@@ -72,5 +73,6 @@ int main(int argc, char **argv) {
   printf("Using graph %s ...\n", file);
   string d = readFile(file);
   runPagerank(d, show);
+    printf("\n");
   return 0;
 }
