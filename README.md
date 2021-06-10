@@ -2,19 +2,18 @@ Performance of [levelwise] based static vs dynamic PageRank ([pull], [CSR],
 [comp-50], [scaled-fill]).
 
 This experiment was for comparing performance between:
-1. Find **static** pagerank with *minimum component size* `50`.
-2. Find **dynamic** pagerank, **scaling** old vertices, and using **1/N** for new vertices.
+1. Find static pagerank using [standard algorithm] *(monolithic)*.
+2. Find static pagerank using [levelwise algorithm].
+3. Find dynamic pagerank using [levelwise algorithm].
 
 Each approach was attempted on a number of graphs, running each with multiple
 batch sizes (`1`, `5`, `10`, `50`, ...). Each pagerank computation was run 5
 times for both approaches to get a good time measure. **Levelwise** pagerank
 is the [STIC-D algorithm], without **ICD** optimizations (using single-thread).
-For some reason, dynamic pagerank becomes faster as batch size increases
-initially, and then starts slowing down (as expected). This is only observed on
-large graphs. I don't have an explanation for this yet. However, on average,
-**dynamic** pagerank faster than the **static** approach.
+Clearly, **dynamic** *levelwise* pagerank faster is than the **static**
+approach for many batch sizes.
 
-All outputs are saved in [out/](out/) and a small part of the output is listed
+All outputs are saved in [out](out/) and a small part of the output is listed
 here. Some [charts] are also included below, generated from [sheets]. The input
 data used for this experiment is available at the
 [Stanford Large Network Dataset Collection].
@@ -93,8 +92,20 @@ $ ...
 # [01955.227 ms; 031 iters.] [4.6541e-6 err.] pagerankLevelwise [dynamic]
 ```
 
-[![](https://i.imgur.com/mfaPm7t.gif)][sheets]
-[![](https://i.imgur.com/8CW5pyw.gif)][sheets]
+[![](https://i.imgur.com/J7EJ7g4.gif)][sheets]
+[![](https://i.imgur.com/cMSMbSZ.gif)][sheets]
+[![](https://i.imgur.com/RQVbFi9.gif)][sheets]
+[![](https://i.imgur.com/UENUt6J.gif)][sheets]
+[![](https://i.imgur.com/JPt5IZQ.gif)][sheets]
+[![](https://i.imgur.com/ODME87P.gif)][sheets]
+[![](https://i.imgur.com/7rYF21F.gif)][sheets]
+[![](https://i.imgur.com/N6rAgzg.gif)][sheets]
+[![](https://i.imgur.com/aKwa3Iy.gif)][sheets]
+[![](https://i.imgur.com/kpCf9il.gif)][sheets]
+[![](https://i.imgur.com/3s999ST.gif)][sheets]
+[![](https://i.imgur.com/P737MqX.gif)][sheets]
+[![](https://i.imgur.com/89GNw7a.gif)][sheets]
+[![](https://i.imgur.com/LyYRrLu.gif)][sheets]
 
 <br>
 <br>
@@ -112,11 +123,13 @@ $ ...
 [![](https://i.imgur.com/cL6ZNtU.jpg)](https://www.youtube.com/watch?v=xEfsE8H6sok)
 
 [levelwise]: https://github.com/puzzlef/pagerank-monolithic-vs-levelwise
+[levelwise algorithm]: https://github.com/puzzlef/pagerank-monolithic-vs-levelwise
+[standard algorithm]: https://github.com/puzzlef/pagerank-monolithic-vs-levelwise
 [pull]: https://github.com/puzzlef/pagerank-push-vs-pull
 [CSR]: https://github.com/puzzlef/pagerank-class-vs-csr
 [comp-50]: https://github.com/puzzlef/pagerank-levelwise-openmp-adjust-component-size
 [scaled-fill]: https://github.com/puzzlef/pagerank-dynamic-adjust-ranks
 [STIC-D algorithm]: https://www.slideshare.net/SubhajitSahu/sticd-algorithmic-techniques-for-efficient-parallel-pagerank-computation-on-realworld-graphs
-[charts]: https://photos.app.goo.gl/rLTCfxrGoLosf1YHA
-[sheets]: https://docs.google.com/spreadsheets/d/1T4LuZGJ07MjQ5zb6nPy27n255BqO2tJrZ50bLUzH0pI/edit?usp=sharing
+[charts]: https://photos.app.goo.gl/1XqKzvtL73xN8Tro6
+[sheets]: https://docs.google.com/spreadsheets/d/1azuAqSPU2RP8Z8wVxNSbW5AJuq1jQmZVo9fA90rf-_s/edit?usp=sharing
 [Stanford Large Network Dataset Collection]: http://snap.stanford.edu/data/index.html
