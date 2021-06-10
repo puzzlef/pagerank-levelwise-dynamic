@@ -29,85 +29,72 @@ $ ...
 # (SHORTENED)
 # ...
 #
-# Using graph sx-stackoverflow.txt ...
+# Using graph sx-stackoverflow ...
 # Temporal edges: 63497051
-# order: 2601975 size: 36233429 {}
+# order: 2601975 size: 36951021 {}
 #
 # # Batch size 1e+0
-# [02978.498 ms; 038 iters.] [0.0000e+0 err.] pagerankStatic
-# [00135.908 ms; 001 iters.] [6.2857e-7 err.] pagerankDynamic
-# [00085.419 ms; 000 iters.] [4.4804e-7 err.] pagerankDynamic [skip-comp]
+# [02439.089 ms; 049 iters.] [0.0000e+0 err.] pagerankStatic
+# [00094.460 ms; 001 iters.] [6.6644e-7 err.] pagerankDynamic
+# [00058.680 ms; 000 iters.] [4.8293e-7 err.] pagerankDynamic [skip-comp]
 #
 # # Batch size 5e+0
-# [02936.456 ms; 038 iters.] [0.0000e+0 err.] pagerankStatic
-# [00172.335 ms; 001 iters.] [9.1362e-7 err.] pagerankDynamic
-# [00162.908 ms; 001 iters.] [8.7759e-7 err.] pagerankDynamic [skip-comp]
+# [02411.729 ms; 049 iters.] [0.0000e+0 err.] pagerankStatic
+# [00122.591 ms; 001 iters.] [9.8462e-7 err.] pagerankDynamic
+# [00113.988 ms; 001 iters.] [9.2387e-7 err.] pagerankDynamic [skip-comp]
 #
 # # Batch size 1e+1
-# [02885.442 ms; 038 iters.] [0.0000e+0 err.] pagerankStatic
-# [00198.521 ms; 001 iters.] [1.0716e-6 err.] pagerankDynamic
-# [00193.457 ms; 001 iters.] [1.0754e-6 err.] pagerankDynamic [skip-comp]
+# [02392.791 ms; 049 iters.] [0.0000e+0 err.] pagerankStatic
+# [00154.871 ms; 001 iters.] [1.1933e-6 err.] pagerankDynamic
+# [00150.654 ms; 001 iters.] [1.1575e-6 err.] pagerankDynamic [skip-comp]
 #
 # # Batch size 5e+1
-# [02886.161 ms; 038 iters.] [0.0000e+0 err.] pagerankStatic
-# [00309.427 ms; 002 iters.] [1.7384e-6 err.] pagerankDynamic
-# [00305.640 ms; 002 iters.] [1.7189e-6 err.] pagerankDynamic [skip-comp]
+# [02435.785 ms; 049 iters.] [0.0000e+0 err.] pagerankStatic
+# [00254.584 ms; 002 iters.] [2.0129e-6 err.] pagerankDynamic
+# [00253.247 ms; 002 iters.] [1.9810e-6 err.] pagerankDynamic [skip-comp]
 #
 # # Batch size 1e+2
-# [02892.402 ms; 038 iters.] [0.0000e+0 err.] pagerankStatic
-# [00365.238 ms; 002 iters.] [2.0316e-6 err.] pagerankDynamic
-# [00361.614 ms; 002 iters.] [2.0111e-6 err.] pagerankDynamic [skip-comp]
+# [02442.940 ms; 049 iters.] [0.0000e+0 err.] pagerankStatic
+# [00301.574 ms; 003 iters.] [2.4152e-6 err.] pagerankDynamic
+# [00299.359 ms; 003 iters.] [2.3857e-6 err.] pagerankDynamic [skip-comp]
 #
 # # Batch size 5e+2
-# [02763.193 ms; 038 iters.] [0.0000e+0 err.] pagerankStatic
-# [00475.344 ms; 004 iters.] [3.0299e-6 err.] pagerankDynamic
-# [00476.270 ms; 003 iters.] [3.0195e-6 err.] pagerankDynamic [skip-comp]
+# [02432.011 ms; 049 iters.] [0.0000e+0 err.] pagerankStatic
+# [00435.612 ms; 005 iters.] [3.6108e-6 err.] pagerankDynamic
+# [00439.719 ms; 005 iters.] [3.5922e-6 err.] pagerankDynamic [skip-comp]
 #
 # # Batch size 1e+3
-# [02617.351 ms; 038 iters.] [0.0000e+0 err.] pagerankStatic
-# [00508.506 ms; 004 iters.] [3.5513e-6 err.] pagerankDynamic
-# [00509.847 ms; 004 iters.] [3.5458e-6 err.] pagerankDynamic [skip-comp]
+# [02546.070 ms; 049 iters.] [0.0000e+0 err.] pagerankStatic
+# [00534.300 ms; 007 iters.] [4.0567e-6 err.] pagerankDynamic
+# [00530.003 ms; 006 iters.] [4.0360e-6 err.] pagerankDynamic [skip-comp]
 #
 # # Batch size 5e+3
-# [02716.211 ms; 038 iters.] [0.0000e+0 err.] pagerankStatic
-# [00784.180 ms; 007 iters.] [4.7989e-6 err.] pagerankDynamic
-# [00783.999 ms; 007 iters.] [4.7847e-6 err.] pagerankDynamic [skip-comp]
+# [02454.957 ms; 049 iters.] [0.0000e+0 err.] pagerankStatic
+# [00795.388 ms; 012 iters.] [4.5533e-6 err.] pagerankDynamic
+# [00798.701 ms; 011 iters.] [4.5399e-6 err.] pagerankDynamic [skip-comp]
 #
 # # Batch size 1e+4
-# [02677.057 ms; 038 iters.] [0.0000e+0 err.] pagerankStatic
-# [00946.650 ms; 009 iters.] [5.1626e-6 err.] pagerankDynamic
-# [00947.246 ms; 009 iters.] [5.1700e-6 err.] pagerankDynamic [skip-comp]
+# [02678.003 ms; 049 iters.] [0.0000e+0 err.] pagerankStatic
+# [01042.808 ms; 014 iters.] [4.5984e-6 err.] pagerankDynamic
+# [01045.956 ms; 014 iters.] [4.5913e-6 err.] pagerankDynamic [skip-comp]
 #
 # # Batch size 5e+4
-# [02804.050 ms; 038 iters.] [0.0000e+0 err.] pagerankStatic
-# [01522.539 ms; 015 iters.] [5.4852e-6 err.] pagerankDynamic
-# [01520.592 ms; 015 iters.] [5.4861e-6 err.] pagerankDynamic [skip-comp]
+# [02853.757 ms; 049 iters.] [0.0000e+0 err.] pagerankStatic
+# [01632.881 ms; 021 iters.] [4.6485e-6 err.] pagerankDynamic
+# [01627.506 ms; 021 iters.] [4.6454e-6 err.] pagerankDynamic [skip-comp]
 #
 # # Batch size 1e+5
-# [02255.807 ms; 038 iters.] [0.0000e+0 err.] pagerankStatic
-# [01406.559 ms; 018 iters.] [5.4895e-6 err.] pagerankDynamic
-# [01405.330 ms; 018 iters.] [5.4860e-6 err.] pagerankDynamic [skip-comp]
+# [02810.581 ms; 049 iters.] [0.0000e+0 err.] pagerankStatic
+# [01844.752 ms; 024 iters.] [4.6653e-6 err.] pagerankDynamic
+# [01849.970 ms; 024 iters.] [4.6565e-6 err.] pagerankDynamic [skip-comp]
 #
 # # Batch size 5e+5
-# [02371.252 ms; 038 iters.] [0.0000e+0 err.] pagerankStatic
-# [01961.793 ms; 025 iters.] [5.3335e-6 err.] pagerankDynamic
-# [01975.427 ms; 025 iters.] [5.3339e-6 err.] pagerankDynamic [skip-comp]
+# [02960.564 ms; 049 iters.] [0.0000e+0 err.] pagerankStatic
+# [02450.280 ms; 031 iters.] [4.4982e-6 err.] pagerankDynamic
+# [02456.433 ms; 031 iters.] [4.4951e-6 err.] pagerankDynamic [skip-comp]
 ```
 
 [![](https://i.imgur.com/8jYDOA5.gif)][sheets]
-[![](https://i.imgur.com/abDT6I1.gif)][sheets]
-[![](https://i.imgur.com/1wdNKhV.gif)][sheets]
-[![](https://i.imgur.com/taLRaKb.gif)][sheets]
-[![](https://i.imgur.com/Hlap6PW.gif)][sheets]
-[![](https://i.imgur.com/J2hdgin.gif)][sheets]
-[![](https://i.imgur.com/CEaPgbe.gif)][sheets]
-[![](https://i.imgur.com/TxP5g79.gif)][sheets]
-[![](https://i.imgur.com/tUrFy5U.gif)][sheets]
-[![](https://i.imgur.com/M24MKEV.gif)][sheets]
-[![](https://i.imgur.com/u4vEPzS.gif)][sheets]
-[![](https://i.imgur.com/VwxUVEK.gif)][sheets]
-[![](https://i.imgur.com/8j3o3EG.gif)][sheets]
-[![](https://i.imgur.com/NcoM9kN.gif)][sheets]
 
 <br>
 <br>
