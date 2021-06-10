@@ -10,7 +10,7 @@ Each approach was attempted on a number of temporal graphs, running each with
 multiple batch sizes (`1`, `5`, `10`, `50`, ...). Each batch size was run 5
 times for each approach to get a good time measure. **Levelwise** pagerank is
 the [STIC-D algorithm], without **ICD** optimizations (using single-thread).
-On average, skipping unchanged components is **barely faster** than not
+On average, *skipping unchanged components* is **barely faster** than not
 skipping.
 
 All outputs are saved in [out](out/) and a small part of the output is listed
@@ -94,7 +94,20 @@ $ ...
 # [02456.433 ms; 031 iters.] [4.4951e-6 err.] pagerankDynamic [skip-comp]
 ```
 
-[![](https://i.imgur.com/8jYDOA5.gif)][sheets]
+[![](https://i.imgur.com/NWamqv3.gif)][sheets]
+[![](https://i.imgur.com/hl2tWfj.gif)][sheets]
+[![](https://i.imgur.com/enKptOX.gif)][sheets]
+[![](https://i.imgur.com/Zvw7Hr5.gif)][sheets]
+[![](https://i.imgur.com/7bZF0vq.gif)][sheets]
+[![](https://i.imgur.com/qjLJGIX.gif)][sheets]
+[![](https://i.imgur.com/U3bQCgA.gif)][sheets]
+[![](https://i.imgur.com/c1JKhJQ.gif)][sheets]
+[![](https://i.imgur.com/eOcudkl.gif)][sheets]
+[![](https://i.imgur.com/o30iBMo.gif)][sheets]
+[![](https://i.imgur.com/FztZhlG.gif)][sheets]
+[![](https://i.imgur.com/6fTov4F.gif)][sheets]
+[![](https://i.imgur.com/CNzIN2F.gif)][sheets]
+[![](https://i.imgur.com/6VaG2Zc.gif)][sheets]
 
 <br>
 <br>
@@ -119,5 +132,5 @@ $ ...
 [skip-comp]: https://github.com/puzzlef/pagerank-levelwise-dynamic-validate-skip-unchanged-components
 [STIC-D algorithm]: https://www.slideshare.net/SubhajitSahu/sticd-algorithmic-techniques-for-efficient-parallel-pagerank-computation-on-realworld-graphs
 [Stanford Large Network Dataset Collection]: http://snap.stanford.edu/data/index.html
-[charts]: https://photos.app.goo.gl/TF4SQpZWH4LtkWM88
+[charts]: https://photos.app.goo.gl/1KP6XUnptc78S3bo7
 [sheets]: https://docs.google.com/spreadsheets/d/1TBWQkhiI2NZwO5eBAK7qdJ1jafDMiU332fqOVS4V8NM/edit?usp=sharing
