@@ -6,7 +6,6 @@
 #include "copy.hxx"
 #include "transpose.hxx"
 #include "components.hxx"
-#include "blockgraph.hxx"
 #include "topologicalSort.hxx"
 #include "deadEnds.hxx"
 #include "mtx.hxx"
