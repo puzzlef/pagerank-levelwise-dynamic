@@ -1,5 +1,6 @@
 #include <cmath>
 #include <random>
+#include <vector>
 #include <cstdio>
 #include <iostream>
 #include "src/main.hxx"
@@ -37,15 +38,20 @@ void runPagerankBatch(const G& x, const H& xt, const vector<float>& ranksOld, in
   auto e1 = l1Norm(a1.ranks, a1.ranks);
   print(y); printf(" [%09.3f ms; %03d iters.] [%.4e err.] pagerankMonolithic [static]\n", a1.time, a1.iterations, e1);
 
-  // Find static pagerank using levelwise algorithm.
-  auto a2 = pagerankLevelwise(y, yt, initStatic, {repeat});
+  // Find dynamic pagerank using standard algorithm.
+  auto a2 = pagerankMonolithic(yt, initDynamic, {repeat});
   auto e2 = l1Norm(a2.ranks, a1.ranks);
-  print(y); printf(" [%09.3f ms; %03d iters.] [%.4e err.] pagerankLevelwise [static]\n", a2.time, a2.iterations, e2);
+  print(y); printf(" [%09.3f ms; %03d iters.] [%.4e err.] pagerankMonolithic [dynamic]\n", a2.time, a2.iterations, e2);
 
-  // Find dynamic pagerank using levelwise algorithm, with skip-comp and scaled-fill.
-  auto a3 = pagerankLevelwise(x, xt, y, yt, initDynamic, {repeat});
+  // Find static pagerank using levelwise algorithm.
+  auto a3 = pagerankLevelwise(y, yt, initStatic, {repeat});
   auto e3 = l1Norm(a3.ranks, a1.ranks);
-  print(y); printf(" [%09.3f ms; %03d iters.] [%.4e err.] pagerankLevelwise [dynamic]\n", a3.time, a3.iterations, e3);
+  print(y); printf(" [%09.3f ms; %03d iters.] [%.4e err.] pagerankLevelwise [static]\n", a3.time, a3.iterations, e3);
+
+  // Find dynamic pagerank using levelwise algorithm.
+  auto a4 = pagerankLevelwise(x, xt, y, yt, initDynamic, {repeat});
+  auto e4 = l1Norm(a4.ranks, a1.ranks);
+  print(y); printf(" [%09.3f ms; %03d iters.] [%.4e err.] pagerankLevelwise [dynamic]\n", a4.time, a4.iterations, e4);
 }
 
 
