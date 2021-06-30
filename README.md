@@ -134,7 +134,8 @@ $ ...
 # ...
 ```
 
-[![](https://i.imgur.com/GXjAjZW.gif)][sheets]
+[![](https://i.imgur.com/51l9Fvu.gif)][sheets]
+[![](https://i.imgur.com/qrLpXzh.gif)][sheets]
 
 <br>
 <br>
@@ -149,7 +150,7 @@ $ ...
 <br>
 <br>
 
-[![](https://i.imgur.com/pH5CTr2.jpg)](https://www.youtube.com/watch?v=rskLxOHNF3k)
+[![](https://i.imgur.com/bOHuBVU.jpg)](https://www.youtube.com/watch?v=RUar5sFdkh8)
 
 [SuiteSparse Matrix Collection]: https://suitesparse-collection-website.herokuapp.com
 [STIC-D algorithm]: https://www.slideshare.net/SubhajitSahu/sticd-algorithmic-techniques-for-efficient-parallel-pagerank-computation-on-realworld-graphs
@@ -162,6 +163,6 @@ $ ...
 [compute-10]: https://github.com/puzzlef/pagerank-levelwise-adjust-compute-size
 [skip-comp]: https://github.com/puzzlef/pagerank-levelwise-dynamic-validate-skip-unchanged-components
 [scaled-fill]: https://github.com/puzzlef/pagerank-dynamic-adjust-ranks
-[branches]: https://github.com/puzzlef/pagerank-monolithic-vs-levelwise/branches
-[charts]: https://photos.app.goo.gl/cvr79cUjgicXM5KDA
-[sheets]: https://docs.google.com/spreadsheets/d/1sQ1FXmv9rc2liBxnB-2Qf_rfJVZQWKiO_5AO7hu1Rl0/edit?usp=sharing
+[branches]: https://github.com/puzzlef/pagerank-levelwise-static-vs-dynamic-with-mtx-insertions/branches
+[charts]: https://photos.app.goo.gl/29GpUSZEjPBtZkfq6
+[sheets]: https://docs.google.com/spreadsheets/d/13-ijfokEXlpX3r5bRNOWg_8mPvomNilF8Yyy4KYOj-s/edit?usp=sharing
