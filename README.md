@@ -1,10 +1,10 @@
-Performance of [levelwise] based static vs dynamic PageRank ([pull], [CSR],
-[comp-50], [scaled-fill]).
+Performance of [levelwise] based **static** vs **dynamic** PageRank ([pull],
+[CSR], [comp-50], [scaled-fill]).
 
 This experiment was for comparing performance between:
-1. Find static pagerank using [standard algorithm] *(monolithic)*.
-2. Find static pagerank using [levelwise algorithm].
-3. Find dynamic pagerank using [levelwise algorithm].
+1. Find **static** pagerank using [standard algorithm] *(monolithic)*.
+2. Find **static** pagerank using [levelwise algorithm].
+3. Find **dynamic** pagerank using [levelwise algorithm].
 
 Each approach was attempted on a number of graphs, running each with multiple
 batch sizes (`1`, `5`, `10`, `50`, ...). Each pagerank computation was run 5
@@ -16,7 +16,8 @@ approach for many batch sizes.
 All outputs are saved in [out](out/) and a small part of the output is listed
 here. Some [charts] are also included below, generated from [sheets]. The input
 data used for this experiment is available at the
-[Stanford Large Network Dataset Collection].
+[Stanford Large Network Dataset Collection]. This experiment was done with
+guidance from [Prof. Dip Sankar Banerjee] and [Prof. Kishore Kothapalli].
 
 <br>
 
@@ -114,7 +115,7 @@ $ ...
 ## References
 
 - [STIC-D: algorithmic techniques for efficient parallel pagerank computation on real-world graphs][STIC-D algorithm]
-- [PageRank Algorithm, Mining massive Datasets (CS246), Stanford University](http://snap.stanford.edu/class/cs246-videos-2019/lec9_190205-cs246-720.mp4)
+- [PageRank Algorithm, Mining massive Datasets (CS246), Stanford University](https://www.youtube.com/watch?v=ke9g8hB0MEo)
 - [Stanford Large Network Dataset Collection]
 
 <br>
@@ -122,6 +123,10 @@ $ ...
 
 [![](https://i.imgur.com/cL6ZNtU.jpg)](https://www.youtube.com/watch?v=xEfsE8H6sok)
 
+[Prof. Dip Sankar Banerjee]: https://sites.google.com/site/dipsankarban/
+[Prof. Kishore Kothapalli]: https://cstar.iiit.ac.in/~kkishore/
+[STIC-D algorithm]: https://www.slideshare.net/SubhajitSahu/sticd-algorithmic-techniques-for-efficient-parallel-pagerank-computation-on-realworld-graphs
+[Stanford Large Network Dataset Collection]: http://snap.stanford.edu/data/index.html
 [levelwise]: https://github.com/puzzlef/pagerank-monolithic-vs-levelwise
 [levelwise algorithm]: https://github.com/puzzlef/pagerank-monolithic-vs-levelwise
 [standard algorithm]: https://github.com/puzzlef/pagerank-monolithic-vs-levelwise
@@ -129,7 +134,5 @@ $ ...
 [CSR]: https://github.com/puzzlef/pagerank-class-vs-csr
 [comp-50]: https://github.com/puzzlef/pagerank-levelwise-openmp-adjust-component-size
 [scaled-fill]: https://github.com/puzzlef/pagerank-dynamic-adjust-ranks
-[STIC-D algorithm]: https://www.slideshare.net/SubhajitSahu/sticd-algorithmic-techniques-for-efficient-parallel-pagerank-computation-on-realworld-graphs
 [charts]: https://photos.app.goo.gl/1XqKzvtL73xN8Tro6
 [sheets]: https://docs.google.com/spreadsheets/d/1azuAqSPU2RP8Z8wVxNSbW5AJuq1jQmZVo9fA90rf-_s/edit?usp=sharing
-[Stanford Large Network Dataset Collection]: http://snap.stanford.edu/data/index.html
