@@ -19,6 +19,8 @@ All outputs are saved in [out](out/) and a small part of the output is listed
 here. Some [charts] are also included below, generated from [sheets]. The input
 data used for this experiment is available at ["graphs"] (for small ones), and
 the [SuiteSparse Matrix Collection]. For previous experiments, see [branches].
+This experiment was done with guidance from [Prof. Dip Sankar Banerjee] and
+[Prof. Kishore Kothapalli].
 
 <br>
 
@@ -144,7 +146,7 @@ $ ...
 ## References
 
 - [STIC-D: algorithmic techniques for efficient parallel pagerank computation on real-world graphs][STIC-D algorithm]
-- [PageRank Algorithm, Mining massive Datasets (CS246), Stanford University](http://snap.stanford.edu/class/cs246-videos-2019/lec9_190205-cs246-720.mp4)
+- [PageRank Algorithm, Mining massive Datasets (CS246), Stanford University](https://www.youtube.com/watch?v=ke9g8hB0MEo)
 - [SuiteSparse Matrix Collection]
 
 <br>
@@ -152,8 +154,10 @@ $ ...
 
 [![](https://i.imgur.com/bOHuBVU.jpg)](https://www.youtube.com/watch?v=RUar5sFdkh8)
 
-[SuiteSparse Matrix Collection]: https://suitesparse-collection-website.herokuapp.com
+[Prof. Dip Sankar Banerjee]: https://sites.google.com/site/dipsankarban/
+[Prof. Kishore Kothapalli]: https://cstar.iiit.ac.in/~kkishore/
 [STIC-D algorithm]: https://www.slideshare.net/SubhajitSahu/sticd-algorithmic-techniques-for-efficient-parallel-pagerank-computation-on-realworld-graphs
+[SuiteSparse Matrix Collection]: https://suitesparse-collection-website.herokuapp.com
 ["graphs"]: https://github.com/puzzlef/graphs
 [monolithic]: https://github.com/puzzlef/pagerank-monolithic-vs-levelwise
 [levelwise]: https://github.com/puzzlef/pagerank-monolithic-vs-levelwise
