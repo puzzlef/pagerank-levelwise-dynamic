@@ -151,7 +151,7 @@ function processShortLog(data) {
   for (var rows of data.values()) {
     var order = Math.max(...rows.map(r => r.order));
     var size = Math.max(...rows.map(r => r.size));
-    a += `Using graph ${rows[0].graph} ...\n`;
+    a += `Using graph ${rows[0].graph}.txt ...\n`;
     a += `Temporal edges: ${rows[0].temporal_edges}\n`;
     a += `order: ${order} size: ${size} {}\n\n`;
     var batch_sizes = new Set(rows.map(r => r.batch_size));
@@ -193,9 +193,21 @@ function main(cmd, log, out) {
       var rows = processShortCsv(data);
       writeCsv(out, rows);
       break;
+    case 'short-csv-dir':
+      for (var [graph, rows] of data) {
+        var rows = processShortCsv(new Map([[graph, rows]]));
+        writeCsv(path.join(out, graph+'.short.csv'), rows);
+      }
+      break;
     case 'short-log':
       var text = processShortLog(data);
       writeFile(out, text);
+      break;
+    case 'short-log-dir':
+      for (var [graph, rows] of data) {
+        var text = processShortLog(new Map([[graph, rows]]));
+        writeFile(path.join(out, graph+'.short.txt'), text);
+      }
       break;
     default:
       console.error(`error: "${cmd}"?`);

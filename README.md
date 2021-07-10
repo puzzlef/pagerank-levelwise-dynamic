@@ -1,22 +1,23 @@
-Checking the performance benefit of [levelwise] PageRank when unchanged
-components are [skipped][skip-comp] ([pull], [CSR], [comp-50], [scaled-fill]).
+Checking the performance benefit of [levelwise] PageRank when **unchanged**
+**components** are [skipped][skip-comp] ([pull], [CSR], [comp-50], [scaled-fill]).
 
 This experiment was for comparing performance between:
-1. Find static levelwise pagerank.
-2. Find dynamic levelwise pagerank (process all components).
-3. Find dynamic levelwise pagerank, [skipping unchanged components][skip-comp].
+1. Find **static** levelwise pagerank.
+2. Find **dynamic** levelwise pagerank (process all components).
+3. Find **dynamic** levelwise pagerank, [skipping unchanged components][skip-comp].
 
 Each approach was attempted on a number of temporal graphs, running each with
 multiple batch sizes (`1`, `5`, `10`, `50`, ...). Each batch size was run 5
 times for each approach to get a good time measure. **Levelwise** pagerank is
 the [STIC-D algorithm], without **ICD** optimizations (using single-thread).
-On average, *skipping unchanged components* is **barely faster** than not
+On average, **skipping unchanged components** is **barely faster** than not
 skipping.
 
 All outputs are saved in [out](out/) and a small part of the output is listed
 here. Some [charts] are also included below, generated from [sheets]. The input
 data used for this experiment is available at the
-[Stanford Large Network Dataset Collection].
+[Stanford Large Network Dataset Collection]. This experiment was done with
+guidance from [Prof. Dip Sankar Banerjee] and [Prof. Kishore Kothapalli].
 
 <br>
 
@@ -116,7 +117,7 @@ $ ...
 ## References
 
 - [STIC-D: algorithmic techniques for efficient parallel pagerank computation on real-world graphs][STIC-D algorithm]
-- [PageRank Algorithm, Mining massive Datasets (CS246), Stanford University](http://snap.stanford.edu/class/cs246-videos-2019/lec9_190205-cs246-720.mp4)
+- [PageRank Algorithm, Mining massive Datasets (CS246), Stanford University](https://www.youtube.com/watch?v=ke9g8hB0MEo)
 - [Stanford Large Network Dataset Collection]
 
 <br>
@@ -124,13 +125,15 @@ $ ...
 
 [![](https://i.imgur.com/YWmqWAg.jpg)](https://www.youtube.com/watch?v=SoiKp2oSUl0)
 
+[Prof. Dip Sankar Banerjee]: https://sites.google.com/site/dipsankarban/
+[Prof. Kishore Kothapalli]: https://cstar.iiit.ac.in/~kkishore/
+[STIC-D algorithm]: https://www.slideshare.net/SubhajitSahu/sticd-algorithmic-techniques-for-efficient-parallel-pagerank-computation-on-realworld-graphs
+[Stanford Large Network Dataset Collection]: http://snap.stanford.edu/data/index.html
 [levelwise]: https://github.com/puzzlef/pagerank-monolithic-vs-levelwise
 [pull]: https://github.com/puzzlef/pagerank-push-vs-pull
 [CSR]: https://github.com/puzzlef/pagerank-class-vs-csr
 [comp-50]: https://github.com/puzzlef/pagerank-levelwise-adjust-component-size
 [scaled-fill]: https://github.com/puzzlef/pagerank-dynamic-adjust-ranks
 [skip-comp]: https://github.com/puzzlef/pagerank-levelwise-dynamic-validate-skip-unchanged-components
-[STIC-D algorithm]: https://www.slideshare.net/SubhajitSahu/sticd-algorithmic-techniques-for-efficient-parallel-pagerank-computation-on-realworld-graphs
-[Stanford Large Network Dataset Collection]: http://snap.stanford.edu/data/index.html
 [charts]: https://photos.app.goo.gl/1KP6XUnptc78S3bo7
 [sheets]: https://docs.google.com/spreadsheets/d/1TBWQkhiI2NZwO5eBAK7qdJ1jafDMiU332fqOVS4V8NM/edit?usp=sharing
