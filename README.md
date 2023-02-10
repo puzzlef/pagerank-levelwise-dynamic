@@ -13,7 +13,7 @@ is the [STIC-D algorithm], without **ICD** optimizations (using single-thread).
 Clearly, **dynamic** *levelwise* pagerank faster is than the **static**
 approach for many batch sizes.
 
-All outputs are saved in [out](out/) and a small part of the output is listed
+All outputs are saved in [gist] and a small part of the output is listed
 here. Some [charts] are also included below, generated from [sheets]. The input
 data used for this experiment is available at the
 [Stanford Large Network Dataset Collection]. This experiment was done with
@@ -127,12 +127,13 @@ $ ...
 [Prof. Kishore Kothapalli]: https://cstar.iiit.ac.in/~kkishore/
 [STIC-D algorithm]: https://www.slideshare.net/SubhajitSahu/sticd-algorithmic-techniques-for-efficient-parallel-pagerank-computation-on-realworld-graphs
 [Stanford Large Network Dataset Collection]: http://snap.stanford.edu/data/index.html
-[levelwise]: https://github.com/puzzlef/pagerank-monolithic-vs-levelwise
-[levelwise algorithm]: https://github.com/puzzlef/pagerank-monolithic-vs-levelwise
-[standard algorithm]: https://github.com/puzzlef/pagerank-monolithic-vs-levelwise
-[pull]: https://github.com/puzzlef/pagerank-push-vs-pull
-[CSR]: https://github.com/puzzlef/pagerank-class-vs-csr
-[comp-50]: https://github.com/puzzlef/pagerank-levelwise-openmp-adjust-component-size
-[scaled-fill]: https://github.com/puzzlef/pagerank-dynamic-adjust-ranks
+[levelwise]: https://github.com/puzzlef/pagerank-levelwise
+[levelwise algorithm]: https://github.com/puzzlef/pagerank-levelwise
+[standard algorithm]: https://github.com/puzzlef/pagerank-levelwise
+[pull]: https://github.com/puzzlef/pagerank
+[CSR]: https://github.com/puzzlef/pagerank
+[comp-50]: https://github.com/puzzlef/pagerank-levelwise
+[scaled-fill]: https://github.com/puzzlef/pagerank-dynamic
+[gist]: https://gist.github.com/wolfram77/1e6cc64dc332baa9afd914764fffb320
 [charts]: https://photos.app.goo.gl/1XqKzvtL73xN8Tro6
 [sheets]: https://docs.google.com/spreadsheets/d/1azuAqSPU2RP8Z8wVxNSbW5AJuq1jQmZVo9fA90rf-_s/edit?usp=sharing
