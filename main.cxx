@@ -1,4 +1,5 @@
 #include <cmath>
+#include <vector>
 #include <string>
 #include <sstream>
 #include <cstdio>
@@ -36,21 +37,21 @@ void runPagerankBatch(const string& data, bool show, int skip, int batch) {
     auto ks = vertices(y);
     ranksAdj.resize(y.span());
 
-    // Find static pagerank using standard algorithm.
-    auto a2 = pagerankMonolithic(yt, initStatic, {repeat});
+    // Find static pagerank of updated graph.
+    auto a2 = pagerankLevelwise(y, yt, initStatic, {repeat});
     auto e2 = l1Norm(a2.ranks, a2.ranks);
-    print(yt); printf(" [%09.3f ms; %03d iters.] [%.4e err.] pagerankMonolithic [static]\n", a2.time, a2.iterations, e2);
+    print(yt); printf(" [%09.3f ms; %03d iters.] [%.4e err.] pagerankStatic\n", a2.time, a2.iterations, e2);
 
-    // Find static pagerank using levelwise algorithm.
-    auto a3 = pagerankLevelwise(y, yt, initStatic, {repeat});
-    auto e3 = l1Norm(a3.ranks, a2.ranks);
-    print(yt); printf(" [%09.3f ms; %03d iters.] [%.4e err.] pagerankLevelwise [static]\n", a3.time, a3.iterations, e3);
-
-    // Find dynamic pagerank using levelwise algorithm, with skip-comp and scaled-fill.
+    // Find dynamic pagerank, with scaled-fill.
     adjustRanks(ranksAdj, ranksOld, ksOld, ks, 0.0f, float(ksOld.size())/ks.size(), 1.0f/ks.size());
+    auto a3 = pagerankLevelwise(y, yt, initDynamic, {repeat});
+    auto e3 = l1Norm(a3.ranks, a2.ranks);
+    print(yt); printf(" [%09.3f ms; %03d iters.] [%.4e err.] pagerankDynamic\n", a3.time, a3.iterations, e3);
+
+    // Find dynamic pagerank, with skip-comp and scaled-fill.
     auto a4 = pagerankLevelwise(x, xt, y, yt, initDynamic, {repeat});
     auto e4 = l1Norm(a4.ranks, a2.ranks);
-    print(yt); printf(" [%09.3f ms; %03d iters.] [%.4e err.] pagerankLevelwise [dynamic]\n", a4.time, a4.iterations, e4);
+    print(yt); printf(" [%09.3f ms; %03d iters.] [%.4e err.] pagerankDynamic [skip-comp]\n", a4.time, a4.iterations, e4);
     x = move(y);
   }
 }
@@ -73,6 +74,6 @@ int main(int argc, char **argv) {
   printf("Using graph %s ...\n", file);
   string d = readFile(file);
   runPagerank(d, show);
-    printf("\n");
+  printf("\n");
   return 0;
 }

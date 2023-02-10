@@ -3,39 +3,39 @@ Temporal edges: 332335
 order: 986 size: 25389 {}
 
 # Batch size 1e+0
-[00001.151 ms; 056 iters.] [0.0000e+0 err.] pagerankMonolithic [static]
-[00001.100 ms; 056 iters.] [3.8542e-6 err.] pagerankLevelwise [static]
-[00000.008 ms; 000 iters.] [3.9175e-6 err.] pagerankLevelwise [dynamic]
+[00001.283 ms; 056 iters.] [0.0000e+0 err.] pagerankStatic
+[00000.034 ms; 001 iters.] [5.0468e-7 err.] pagerankDynamic
+[00000.009 ms; 000 iters.] [2.3805e-7 err.] pagerankDynamic [skip-comp]
 
 # Batch size 5e+0
-[00001.157 ms; 056 iters.] [0.0000e+0 err.] pagerankMonolithic [static]
-[00001.091 ms; 056 iters.] [3.8600e-6 err.] pagerankLevelwise [static]
-[00000.060 ms; 004 iters.] [4.4266e-6 err.] pagerankLevelwise [dynamic]
+[00001.279 ms; 056 iters.] [0.0000e+0 err.] pagerankStatic
+[00000.092 ms; 005 iters.] [1.7703e-6 err.] pagerankDynamic
+[00000.071 ms; 004 iters.] [1.5469e-6 err.] pagerankDynamic [skip-comp]
 
 # Batch size 1e+1
-[00001.138 ms; 056 iters.] [0.0000e+0 err.] pagerankMonolithic [static]
-[00001.073 ms; 056 iters.] [3.8600e-6 err.] pagerankLevelwise [static]
-[00000.089 ms; 006 iters.] [4.6325e-6 err.] pagerankLevelwise [dynamic]
+[00001.285 ms; 056 iters.] [0.0000e+0 err.] pagerankStatic
+[00000.121 ms; 006 iters.] [2.3703e-6 err.] pagerankDynamic
+[00000.104 ms; 006 iters.] [2.1757e-6 err.] pagerankDynamic [skip-comp]
 
 # Batch size 5e+1
-[00001.137 ms; 056 iters.] [0.0000e+0 err.] pagerankMonolithic [static]
-[00001.074 ms; 056 iters.] [3.8752e-6 err.] pagerankLevelwise [static]
-[00000.227 ms; 014 iters.] [5.6390e-6 err.] pagerankLevelwise [dynamic]
+[00001.281 ms; 056 iters.] [0.0000e+0 err.] pagerankStatic
+[00000.278 ms; 014 iters.] [5.0122e-6 err.] pagerankDynamic
+[00000.273 ms; 014 iters.] [4.9437e-6 err.] pagerankDynamic [skip-comp]
 
 # Batch size 1e+2
-[00001.134 ms; 056 iters.] [0.0000e+0 err.] pagerankMonolithic [static]
-[00001.070 ms; 056 iters.] [3.8531e-6 err.] pagerankLevelwise [static]
-[00000.303 ms; 018 iters.] [6.0324e-6 err.] pagerankLevelwise [dynamic]
+[00001.284 ms; 056 iters.] [0.0000e+0 err.] pagerankStatic
+[00000.362 ms; 018 iters.] [5.6398e-6 err.] pagerankDynamic
+[00000.361 ms; 018 iters.] [5.6296e-6 err.] pagerankDynamic [skip-comp]
 
 # Batch size 5e+2
-[00001.146 ms; 056 iters.] [0.0000e+0 err.] pagerankMonolithic [static]
-[00001.082 ms; 056 iters.] [3.8363e-6 err.] pagerankLevelwise [static]
-[00000.438 ms; 025 iters.] [5.8313e-6 err.] pagerankLevelwise [dynamic]
+[00001.283 ms; 056 iters.] [0.0000e+0 err.] pagerankStatic
+[00000.520 ms; 025 iters.] [4.1830e-6 err.] pagerankDynamic
+[00000.520 ms; 025 iters.] [4.1830e-6 err.] pagerankDynamic [skip-comp]
 
 # Batch size 1e+3
-[00001.142 ms; 056 iters.] [0.0000e+0 err.] pagerankMonolithic [static]
-[00001.071 ms; 056 iters.] [3.9051e-6 err.] pagerankLevelwise [static]
-[00000.480 ms; 027 iters.] [5.6111e-6 err.] pagerankLevelwise [dynamic]
+[00001.280 ms; 056 iters.] [0.0000e+0 err.] pagerankStatic
+[00000.570 ms; 027 iters.] [3.6263e-6 err.] pagerankDynamic
+[00000.570 ms; 027 iters.] [3.6263e-6 err.] pagerankDynamic [skip-comp]
 
 
 Using graph CollegeMsg ...
@@ -43,34 +43,34 @@ Temporal edges: 59836
 order: 1898 size: 21298 {}
 
 # Batch size 1e+0
-[00000.952 ms; 052 iters.] [0.0000e+0 err.] pagerankMonolithic [static]
-[00000.884 ms; 055 iters.] [2.5210e-6 err.] pagerankLevelwise [static]
-[00000.084 ms; 005 iters.] [3.5817e-6 err.] pagerankLevelwise [dynamic]
+[00001.017 ms; 055 iters.] [0.0000e+0 err.] pagerankStatic
+[00000.110 ms; 005 iters.] [2.1878e-6 err.] pagerankDynamic
+[00000.095 ms; 005 iters.] [1.9270e-6 err.] pagerankDynamic [skip-comp]
 
 # Batch size 5e+0
-[00000.941 ms; 052 iters.] [0.0000e+0 err.] pagerankMonolithic [static]
-[00000.866 ms; 055 iters.] [2.5145e-6 err.] pagerankLevelwise [static]
-[00000.195 ms; 013 iters.] [5.0603e-6 err.] pagerankLevelwise [dynamic]
+[00001.002 ms; 055 iters.] [0.0000e+0 err.] pagerankStatic
+[00000.230 ms; 013 iters.] [4.5821e-6 err.] pagerankDynamic
+[00000.225 ms; 013 iters.] [4.5079e-6 err.] pagerankDynamic [skip-comp]
 
 # Batch size 1e+1
-[00000.924 ms; 052 iters.] [0.0000e+0 err.] pagerankMonolithic [static]
-[00000.858 ms; 055 iters.] [2.4943e-6 err.] pagerankLevelwise [static]
-[00000.237 ms; 017 iters.] [5.2437e-6 err.] pagerankLevelwise [dynamic]
+[00001.011 ms; 055 iters.] [0.0000e+0 err.] pagerankStatic
+[00000.281 ms; 017 iters.] [4.8393e-6 err.] pagerankDynamic
+[00000.280 ms; 017 iters.] [4.8085e-6 err.] pagerankDynamic [skip-comp]
 
 # Batch size 5e+1
-[00000.920 ms; 052 iters.] [0.0000e+0 err.] pagerankMonolithic [static]
-[00000.847 ms; 055 iters.] [2.4704e-6 err.] pagerankLevelwise [static]
-[00000.361 ms; 026 iters.] [5.3158e-6 err.] pagerankLevelwise [dynamic]
+[00001.009 ms; 055 iters.] [0.0000e+0 err.] pagerankStatic
+[00000.428 ms; 026 iters.] [4.7587e-6 err.] pagerankDynamic
+[00000.429 ms; 026 iters.] [4.7579e-6 err.] pagerankDynamic [skip-comp]
 
 # Batch size 1e+2
-[00000.926 ms; 052 iters.] [0.0000e+0 err.] pagerankMonolithic [static]
-[00000.860 ms; 055 iters.] [2.4562e-6 err.] pagerankLevelwise [static]
-[00000.410 ms; 029 iters.] [5.2751e-6 err.] pagerankLevelwise [dynamic]
+[00001.008 ms; 055 iters.] [0.0000e+0 err.] pagerankStatic
+[00000.480 ms; 029 iters.] [4.5901e-6 err.] pagerankDynamic
+[00000.480 ms; 029 iters.] [4.5901e-6 err.] pagerankDynamic [skip-comp]
 
 # Batch size 5e+2
-[00000.926 ms; 052 iters.] [0.0000e+0 err.] pagerankMonolithic [static]
-[00000.857 ms; 055 iters.] [2.4478e-6 err.] pagerankLevelwise [static]
-[00000.514 ms; 036 iters.] [4.9497e-6 err.] pagerankLevelwise [dynamic]
+[00001.008 ms; 055 iters.] [0.0000e+0 err.] pagerankStatic
+[00000.605 ms; 036 iters.] [3.8592e-6 err.] pagerankDynamic
+[00000.606 ms; 036 iters.] [3.8592e-6 err.] pagerankDynamic [skip-comp]
 
 
 Using graph sx-mathoverflow ...
@@ -78,44 +78,44 @@ Temporal edges: 506551
 order: 24817 size: 247559 {}
 
 # Batch size 1e+0
-[00015.032 ms; 040 iters.] [0.0000e+0 err.] pagerankMonolithic [static]
-[00011.990 ms; 052 iters.] [3.0529e-6 err.] pagerankLevelwise [static]
-[00000.556 ms; 002 iters.] [3.6109e-6 err.] pagerankLevelwise [dynamic]
+[00013.875 ms; 052 iters.] [0.0000e+0 err.] pagerankStatic
+[00000.847 ms; 002 iters.] [1.5157e-6 err.] pagerankDynamic
+[00000.620 ms; 002 iters.] [1.2962e-6 err.] pagerankDynamic [skip-comp]
 
 # Batch size 5e+0
-[00015.040 ms; 040 iters.] [0.0000e+0 err.] pagerankMonolithic [static]
-[00011.987 ms; 052 iters.] [3.0508e-6 err.] pagerankLevelwise [static]
-[00001.455 ms; 004 iters.] [4.4078e-6 err.] pagerankLevelwise [dynamic]
+[00013.540 ms; 052 iters.] [0.0000e+0 err.] pagerankStatic
+[00001.659 ms; 005 iters.] [2.9808e-6 err.] pagerankDynamic
+[00001.595 ms; 004 iters.] [2.9182e-6 err.] pagerankDynamic [skip-comp]
 
 # Batch size 1e+1
-[00015.074 ms; 040 iters.] [0.0000e+0 err.] pagerankMonolithic [static]
-[00012.029 ms; 052 iters.] [3.0508e-6 err.] pagerankLevelwise [static]
-[00002.092 ms; 007 iters.] [4.8151e-6 err.] pagerankLevelwise [dynamic]
+[00013.558 ms; 052 iters.] [0.0000e+0 err.] pagerankStatic
+[00002.314 ms; 007 iters.] [3.7718e-6 err.] pagerankDynamic
+[00002.286 ms; 007 iters.] [3.7451e-6 err.] pagerankDynamic [skip-comp]
 
 # Batch size 5e+1
-[00015.077 ms; 040 iters.] [0.0000e+0 err.] pagerankMonolithic [static]
-[00011.987 ms; 052 iters.] [3.0540e-6 err.] pagerankLevelwise [static]
-[00003.381 ms; 012 iters.] [5.2313e-6 err.] pagerankLevelwise [dynamic]
+[00013.532 ms; 052 iters.] [0.0000e+0 err.] pagerankStatic
+[00003.768 ms; 013 iters.] [4.7135e-6 err.] pagerankDynamic
+[00003.760 ms; 012 iters.] [4.6883e-6 err.] pagerankDynamic [skip-comp]
 
 # Batch size 1e+2
-[00015.129 ms; 040 iters.] [0.0000e+0 err.] pagerankMonolithic [static]
-[00012.066 ms; 052 iters.] [3.0336e-6 err.] pagerankLevelwise [static]
-[00003.972 ms; 015 iters.] [5.1345e-6 err.] pagerankLevelwise [dynamic]
+[00013.698 ms; 052 iters.] [0.0000e+0 err.] pagerankStatic
+[00004.456 ms; 015 iters.] [4.7882e-6 err.] pagerankDynamic
+[00004.429 ms; 015 iters.] [4.7669e-6 err.] pagerankDynamic [skip-comp]
 
 # Batch size 5e+2
-[00015.141 ms; 040 iters.] [0.0000e+0 err.] pagerankMonolithic [static]
-[00012.079 ms; 052 iters.] [3.0259e-6 err.] pagerankLevelwise [static]
-[00005.572 ms; 022 iters.] [5.0032e-6 err.] pagerankLevelwise [dynamic]
+[00013.758 ms; 052 iters.] [0.0000e+0 err.] pagerankStatic
+[00006.319 ms; 022 iters.] [4.7158e-6 err.] pagerankDynamic
+[00006.313 ms; 022 iters.] [4.6951e-6 err.] pagerankDynamic [skip-comp]
 
 # Batch size 1e+3
-[00015.259 ms; 040 iters.] [0.0000e+0 err.] pagerankMonolithic [static]
-[00012.192 ms; 052 iters.] [3.0644e-6 err.] pagerankLevelwise [static]
-[00006.307 ms; 025 iters.] [4.9015e-6 err.] pagerankLevelwise [dynamic]
+[00013.719 ms; 052 iters.] [0.0000e+0 err.] pagerankStatic
+[00007.064 ms; 025 iters.] [4.6693e-6 err.] pagerankDynamic
+[00007.043 ms; 025 iters.] [4.6583e-6 err.] pagerankDynamic [skip-comp]
 
 # Batch size 5e+3
-[00015.870 ms; 040 iters.] [0.0000e+0 err.] pagerankMonolithic [static]
-[00012.615 ms; 052 iters.] [3.0611e-6 err.] pagerankLevelwise [static]
-[00008.230 ms; 031 iters.] [4.6969e-6 err.] pagerankLevelwise [dynamic]
+[00013.736 ms; 052 iters.] [0.0000e+0 err.] pagerankStatic
+[00008.893 ms; 031 iters.] [4.3499e-6 err.] pagerankDynamic
+[00008.920 ms; 031 iters.] [4.3397e-6 err.] pagerankDynamic [skip-comp]
 
 
 Using graph sx-askubuntu ...
@@ -123,44 +123,44 @@ Temporal edges: 964438
 order: 159312 size: 654622 {}
 
 # Batch size 1e+0
-[00067.501 ms; 034 iters.] [0.0000e+0 err.] pagerankMonolithic [static]
-[00049.874 ms; 058 iters.] [4.7884e-6 err.] pagerankLevelwise [static]
-[00001.336 ms; 001 iters.] [4.8372e-6 err.] pagerankLevelwise [dynamic]
+[00060.579 ms; 058 iters.] [0.0000e+0 err.] pagerankStatic
+[00002.653 ms; 001 iters.] [9.5805e-7 err.] pagerankDynamic
+[00001.494 ms; 001 iters.] [7.2677e-7 err.] pagerankDynamic [skip-comp]
 
 # Batch size 5e+0
-[00069.498 ms; 034 iters.] [0.0000e+0 err.] pagerankMonolithic [static]
-[00051.478 ms; 058 iters.] [4.7884e-6 err.] pagerankLevelwise [static]
-[00004.272 ms; 002 iters.] [5.3280e-6 err.] pagerankLevelwise [dynamic]
+[00060.533 ms; 058 iters.] [0.0000e+0 err.] pagerankStatic
+[00005.078 ms; 002 iters.] [2.1204e-6 err.] pagerankDynamic
+[00004.687 ms; 002 iters.] [2.0687e-6 err.] pagerankDynamic [skip-comp]
 
 # Batch size 1e+1
-[00070.938 ms; 034 iters.] [0.0000e+0 err.] pagerankMonolithic [static]
-[00052.686 ms; 058 iters.] [4.7884e-6 err.] pagerankLevelwise [static]
-[00005.998 ms; 003 iters.] [5.5491e-6 err.] pagerankLevelwise [dynamic]
+[00060.494 ms; 058 iters.] [0.0000e+0 err.] pagerankStatic
+[00006.811 ms; 003 iters.] [2.7445e-6 err.] pagerankDynamic
+[00006.497 ms; 003 iters.] [2.7123e-6 err.] pagerankDynamic [skip-comp]
 
 # Batch size 5e+1
-[00071.067 ms; 034 iters.] [0.0000e+0 err.] pagerankMonolithic [static]
-[00052.631 ms; 058 iters.] [4.7853e-6 err.] pagerankLevelwise [static]
-[00010.241 ms; 007 iters.] [5.8436e-6 err.] pagerankLevelwise [dynamic]
+[00060.420 ms; 058 iters.] [0.0000e+0 err.] pagerankStatic
+[00011.448 ms; 007 iters.] [4.0068e-6 err.] pagerankDynamic
+[00011.225 ms; 007 iters.] [3.9775e-6 err.] pagerankDynamic [skip-comp]
 
 # Batch size 1e+2
-[00070.912 ms; 034 iters.] [0.0000e+0 err.] pagerankMonolithic [static]
-[00052.623 ms; 058 iters.] [4.7858e-6 err.] pagerankLevelwise [static]
-[00012.313 ms; 009 iters.] [5.8517e-6 err.] pagerankLevelwise [dynamic]
+[00060.348 ms; 058 iters.] [0.0000e+0 err.] pagerankStatic
+[00013.828 ms; 009 iters.] [4.3657e-6 err.] pagerankDynamic
+[00013.603 ms; 009 iters.] [4.3365e-6 err.] pagerankDynamic [skip-comp]
 
 # Batch size 5e+2
-[00070.911 ms; 034 iters.] [0.0000e+0 err.] pagerankMonolithic [static]
-[00052.595 ms; 058 iters.] [4.7933e-6 err.] pagerankLevelwise [static]
-[00017.669 ms; 015 iters.] [5.7959e-6 err.] pagerankLevelwise [dynamic]
+[00060.395 ms; 058 iters.] [0.0000e+0 err.] pagerankStatic
+[00020.017 ms; 015 iters.] [4.8219e-6 err.] pagerankDynamic
+[00019.809 ms; 015 iters.] [4.7988e-6 err.] pagerankDynamic [skip-comp]
 
 # Batch size 1e+3
-[00070.846 ms; 034 iters.] [0.0000e+0 err.] pagerankMonolithic [static]
-[00052.592 ms; 058 iters.] [4.7952e-6 err.] pagerankLevelwise [static]
-[00020.299 ms; 018 iters.] [5.7532e-6 err.] pagerankLevelwise [dynamic]
+[00060.585 ms; 058 iters.] [0.0000e+0 err.] pagerankStatic
+[00023.124 ms; 018 iters.] [4.8913e-6 err.] pagerankDynamic
+[00022.910 ms; 018 iters.] [4.8665e-6 err.] pagerankDynamic [skip-comp]
 
 # Batch size 5e+3
-[00071.103 ms; 034 iters.] [0.0000e+0 err.] pagerankMonolithic [static]
-[00052.695 ms; 058 iters.] [4.8013e-6 err.] pagerankLevelwise [static]
-[00026.640 ms; 025 iters.] [5.6769e-6 err.] pagerankLevelwise [dynamic]
+[00060.615 ms; 058 iters.] [0.0000e+0 err.] pagerankStatic
+[00030.347 ms; 025 iters.] [4.9104e-6 err.] pagerankDynamic
+[00030.183 ms; 025 iters.] [4.8884e-6 err.] pagerankDynamic [skip-comp]
 
 
 Using graph sx-superuser ...
@@ -168,49 +168,49 @@ Temporal edges: 1443340
 order: 194081 size: 979876 {}
 
 # Batch size 1e+0
-[00104.059 ms; 040 iters.] [0.0000e+0 err.] pagerankMonolithic [static]
-[00068.671 ms; 055 iters.] [5.9384e-6 err.] pagerankLevelwise [static]
-[00002.162 ms; 001 iters.] [5.8058e-6 err.] pagerankLevelwise [dynamic]
+[00078.337 ms; 055 iters.] [0.0000e+0 err.] pagerankStatic
+[00003.694 ms; 001 iters.] [1.0362e-6 err.] pagerankDynamic
+[00002.321 ms; 001 iters.] [8.2692e-7 err.] pagerankDynamic [skip-comp]
 
 # Batch size 5e+0
-[00104.036 ms; 040 iters.] [0.0000e+0 err.] pagerankMonolithic [static]
-[00068.699 ms; 055 iters.] [5.9384e-6 err.] pagerankLevelwise [static]
-[00005.842 ms; 002 iters.] [5.7590e-6 err.] pagerankLevelwise [dynamic]
+[00078.281 ms; 055 iters.] [0.0000e+0 err.] pagerankStatic
+[00006.816 ms; 002 iters.] [2.1933e-6 err.] pagerankDynamic
+[00006.324 ms; 002 iters.] [2.1294e-6 err.] pagerankDynamic [skip-comp]
 
 # Batch size 1e+1
-[00103.153 ms; 040 iters.] [0.0000e+0 err.] pagerankMonolithic [static]
-[00068.058 ms; 055 iters.] [5.9495e-6 err.] pagerankLevelwise [static]
-[00007.490 ms; 003 iters.] [5.8745e-6 err.] pagerankLevelwise [dynamic]
+[00077.415 ms; 055 iters.] [0.0000e+0 err.] pagerankStatic
+[00008.564 ms; 003 iters.] [2.8758e-6 err.] pagerankDynamic
+[00008.134 ms; 003 iters.] [2.8300e-6 err.] pagerankDynamic [skip-comp]
 
 # Batch size 5e+1
-[00104.340 ms; 040 iters.] [0.0000e+0 err.] pagerankMonolithic [static]
-[00068.718 ms; 055 iters.] [5.9644e-6 err.] pagerankLevelwise [static]
-[00013.080 ms; 006 iters.] [6.0704e-6 err.] pagerankLevelwise [dynamic]
+[00078.577 ms; 055 iters.] [0.0000e+0 err.] pagerankStatic
+[00014.722 ms; 007 iters.] [4.3060e-6 err.] pagerankDynamic
+[00014.417 ms; 006 iters.] [4.2640e-6 err.] pagerankDynamic [skip-comp]
 
 # Batch size 1e+2
-[00104.357 ms; 040 iters.] [0.0000e+0 err.] pagerankMonolithic [static]
-[00068.819 ms; 055 iters.] [5.9765e-6 err.] pagerankLevelwise [static]
-[00015.826 ms; 008 iters.] [6.1038e-6 err.] pagerankLevelwise [dynamic]
+[00078.595 ms; 055 iters.] [0.0000e+0 err.] pagerankStatic
+[00017.836 ms; 008 iters.] [4.8699e-6 err.] pagerankDynamic
+[00017.536 ms; 008 iters.] [4.8330e-6 err.] pagerankDynamic [skip-comp]
 
 # Batch size 5e+2
-[00104.471 ms; 040 iters.] [0.0000e+0 err.] pagerankMonolithic [static]
-[00068.887 ms; 055 iters.] [5.9424e-6 err.] pagerankLevelwise [static]
-[00023.076 ms; 014 iters.] [5.9370e-6 err.] pagerankLevelwise [dynamic]
+[00078.601 ms; 055 iters.] [0.0000e+0 err.] pagerankStatic
+[00026.163 ms; 014 iters.] [5.6450e-6 err.] pagerankDynamic
+[00025.888 ms; 014 iters.] [5.6109e-6 err.] pagerankDynamic [skip-comp]
 
 # Batch size 1e+3
-[00103.651 ms; 040 iters.] [0.0000e+0 err.] pagerankMonolithic [static]
-[00068.248 ms; 055 iters.] [5.9448e-6 err.] pagerankLevelwise [static]
-[00026.366 ms; 016 iters.] [5.8789e-6 err.] pagerankLevelwise [dynamic]
+[00078.262 ms; 055 iters.] [0.0000e+0 err.] pagerankStatic
+[00029.915 ms; 016 iters.] [5.8233e-6 err.] pagerankDynamic
+[00029.654 ms; 016 iters.] [5.7855e-6 err.] pagerankDynamic [skip-comp]
 
 # Batch size 5e+3
-[00103.620 ms; 040 iters.] [0.0000e+0 err.] pagerankMonolithic [static]
-[00068.197 ms; 055 iters.] [5.9703e-6 err.] pagerankLevelwise [static]
-[00034.800 ms; 023 iters.] [5.7707e-6 err.] pagerankLevelwise [dynamic]
+[00078.189 ms; 055 iters.] [0.0000e+0 err.] pagerankStatic
+[00039.525 ms; 023 iters.] [6.0102e-6 err.] pagerankDynamic
+[00039.300 ms; 023 iters.] [5.9899e-6 err.] pagerankDynamic [skip-comp]
 
 # Batch size 1e+4
-[00103.837 ms; 040 iters.] [0.0000e+0 err.] pagerankMonolithic [static]
-[00068.426 ms; 055 iters.] [5.9590e-6 err.] pagerankLevelwise [static]
-[00038.751 ms; 026 iters.] [5.7196e-6 err.] pagerankLevelwise [dynamic]
+[00078.163 ms; 055 iters.] [0.0000e+0 err.] pagerankStatic
+[00043.877 ms; 026 iters.] [5.9290e-6 err.] pagerankDynamic
+[00043.752 ms; 026 iters.] [5.9165e-6 err.] pagerankDynamic [skip-comp]
 
 
 Using graph wiki-talk-temporal ...
@@ -218,54 +218,54 @@ Temporal edges: 7833141
 order: 1140122 size: 4205751 {}
 
 # Batch size 1e+0
-[00206.386 ms; 037 iters.] [0.0000e+0 err.] pagerankMonolithic [static]
-[00161.822 ms; 041 iters.] [3.8271e-6 err.] pagerankLevelwise [static]
-[00003.882 ms; 000 iters.] [3.7374e-6 err.] pagerankLevelwise [dynamic]
+[00186.434 ms; 041 iters.] [0.0000e+0 err.] pagerankStatic
+[00007.388 ms; 001 iters.] [5.3366e-7 err.] pagerankDynamic
+[00004.148 ms; 000 iters.] [3.4723e-7 err.] pagerankDynamic [skip-comp]
 
 # Batch size 5e+0
-[00207.917 ms; 037 iters.] [0.0000e+0 err.] pagerankMonolithic [static]
-[00162.344 ms; 041 iters.] [3.8271e-6 err.] pagerankLevelwise [static]
-[00007.288 ms; 001 iters.] [3.7226e-6 err.] pagerankLevelwise [dynamic]
+[00186.763 ms; 041 iters.] [0.0000e+0 err.] pagerankStatic
+[00009.253 ms; 001 iters.] [8.6423e-7 err.] pagerankDynamic
+[00007.777 ms; 001 iters.] [7.9730e-7 err.] pagerankDynamic [skip-comp]
 
 # Batch size 1e+1
-[00208.665 ms; 037 iters.] [0.0000e+0 err.] pagerankMonolithic [static]
-[00162.619 ms; 041 iters.] [3.8271e-6 err.] pagerankLevelwise [static]
-[00009.101 ms; 001 iters.] [3.7488e-6 err.] pagerankLevelwise [dynamic]
+[00186.842 ms; 041 iters.] [0.0000e+0 err.] pagerankStatic
+[00010.865 ms; 001 iters.] [1.1436e-6 err.] pagerankDynamic
+[00009.758 ms; 001 iters.] [1.1016e-6 err.] pagerankDynamic [skip-comp]
 
 # Batch size 5e+1
-[00206.252 ms; 037 iters.] [0.0000e+0 err.] pagerankMonolithic [static]
-[00162.175 ms; 041 iters.] [3.8271e-6 err.] pagerankLevelwise [static]
-[00015.109 ms; 002 iters.] [3.9726e-6 err.] pagerankLevelwise [dynamic]
+[00186.441 ms; 041 iters.] [0.0000e+0 err.] pagerankStatic
+[00016.614 ms; 002 iters.] [2.0556e-6 err.] pagerankDynamic
+[00016.303 ms; 002 iters.] [2.0442e-6 err.] pagerankDynamic [skip-comp]
 
 # Batch size 1e+2
-[00206.375 ms; 037 iters.] [0.0000e+0 err.] pagerankMonolithic [static]
-[00161.964 ms; 041 iters.] [3.8240e-6 err.] pagerankLevelwise [static]
-[00017.839 ms; 003 iters.] [4.1698e-6 err.] pagerankLevelwise [dynamic]
+[00186.419 ms; 041 iters.] [0.0000e+0 err.] pagerankStatic
+[00019.479 ms; 003 iters.] [2.5933e-6 err.] pagerankDynamic
+[00019.275 ms; 003 iters.] [2.5859e-6 err.] pagerankDynamic [skip-comp]
 
 # Batch size 5e+2
-[00206.156 ms; 037 iters.] [0.0000e+0 err.] pagerankMonolithic [static]
-[00161.866 ms; 041 iters.] [3.8188e-6 err.] pagerankLevelwise [static]
-[00028.844 ms; 006 iters.] [4.8246e-6 err.] pagerankLevelwise [dynamic]
+[00186.225 ms; 041 iters.] [0.0000e+0 err.] pagerankStatic
+[00031.600 ms; 006 iters.] [4.5716e-6 err.] pagerankDynamic
+[00031.602 ms; 006 iters.] [4.5714e-6 err.] pagerankDynamic [skip-comp]
 
 # Batch size 1e+3
-[00206.017 ms; 037 iters.] [0.0000e+0 err.] pagerankMonolithic [static]
-[00161.950 ms; 041 iters.] [3.8217e-6 err.] pagerankLevelwise [static]
-[00036.302 ms; 008 iters.] [5.1240e-6 err.] pagerankLevelwise [dynamic]
+[00186.288 ms; 041 iters.] [0.0000e+0 err.] pagerankStatic
+[00040.147 ms; 008 iters.] [5.3484e-6 err.] pagerankDynamic
+[00040.068 ms; 008 iters.] [5.3484e-6 err.] pagerankDynamic [skip-comp]
 
 # Batch size 5e+3
-[00206.300 ms; 037 iters.] [0.0000e+0 err.] pagerankMonolithic [static]
-[00162.007 ms; 041 iters.] [3.8200e-6 err.] pagerankLevelwise [static]
-[00058.277 ms; 015 iters.] [5.5406e-6 err.] pagerankLevelwise [dynamic]
+[00186.116 ms; 041 iters.] [0.0000e+0 err.] pagerankStatic
+[00065.644 ms; 015 iters.] [6.3662e-6 err.] pagerankDynamic
+[00065.589 ms; 015 iters.] [6.3660e-6 err.] pagerankDynamic [skip-comp]
 
 # Batch size 1e+4
-[00206.205 ms; 037 iters.] [0.0000e+0 err.] pagerankMonolithic [static]
-[00161.990 ms; 041 iters.] [3.8176e-6 err.] pagerankLevelwise [static]
-[00068.726 ms; 017 iters.] [5.6569e-6 err.] pagerankLevelwise [dynamic]
+[00186.403 ms; 041 iters.] [0.0000e+0 err.] pagerankStatic
+[00077.996 ms; 017 iters.] [6.5427e-6 err.] pagerankDynamic
+[00078.045 ms; 017 iters.] [6.5425e-6 err.] pagerankDynamic [skip-comp]
 
 # Batch size 5e+4
-[00206.182 ms; 037 iters.] [0.0000e+0 err.] pagerankMonolithic [static]
-[00161.956 ms; 041 iters.] [3.8296e-6 err.] pagerankLevelwise [static]
-[00094.747 ms; 025 iters.] [5.6778e-6 err.] pagerankLevelwise [dynamic]
+[00186.112 ms; 041 iters.] [0.0000e+0 err.] pagerankStatic
+[00108.386 ms; 025 iters.] [6.5844e-6 err.] pagerankDynamic
+[00108.385 ms; 025 iters.] [6.5844e-6 err.] pagerankDynamic [skip-comp]
 
 
 Using graph sx-stackoverflow ...
@@ -273,61 +273,61 @@ Temporal edges: 63497051
 order: 2601975 size: 36951021 {}
 
 # Batch size 1e+0
-[03778.890 ms; 044 iters.] [0.0000e+0 err.] pagerankMonolithic [static]
-[02090.958 ms; 049 iters.] [3.9878e-6 err.] pagerankLevelwise [static]
-[00051.059 ms; 000 iters.] [3.9724e-6 err.] pagerankLevelwise [dynamic]
+[02439.089 ms; 049 iters.] [0.0000e+0 err.] pagerankStatic
+[00094.460 ms; 001 iters.] [6.6644e-7 err.] pagerankDynamic
+[00058.680 ms; 000 iters.] [4.8293e-7 err.] pagerankDynamic [skip-comp]
 
 # Batch size 5e+0
-[03790.509 ms; 044 iters.] [0.0000e+0 err.] pagerankMonolithic [static]
-[02074.838 ms; 049 iters.] [3.9779e-6 err.] pagerankLevelwise [static]
-[00101.090 ms; 001 iters.] [4.0244e-6 err.] pagerankLevelwise [dynamic]
+[02411.729 ms; 049 iters.] [0.0000e+0 err.] pagerankStatic
+[00122.591 ms; 001 iters.] [9.8462e-7 err.] pagerankDynamic
+[00113.988 ms; 001 iters.] [9.2387e-7 err.] pagerankDynamic [skip-comp]
 
 # Batch size 1e+1
-[03828.967 ms; 044 iters.] [0.0000e+0 err.] pagerankMonolithic [static]
-[02087.992 ms; 049 iters.] [3.9770e-6 err.] pagerankLevelwise [static]
-[00133.614 ms; 001 iters.] [4.1197e-6 err.] pagerankLevelwise [dynamic]
+[02392.791 ms; 049 iters.] [0.0000e+0 err.] pagerankStatic
+[00154.871 ms; 001 iters.] [1.1933e-6 err.] pagerankDynamic
+[00150.654 ms; 001 iters.] [1.1575e-6 err.] pagerankDynamic [skip-comp]
 
 # Batch size 5e+1
-[03784.429 ms; 044 iters.] [0.0000e+0 err.] pagerankMonolithic [static]
-[02089.587 ms; 049 iters.] [3.9787e-6 err.] pagerankLevelwise [static]
-[00220.933 ms; 002 iters.] [4.4152e-6 err.] pagerankLevelwise [dynamic]
+[02435.785 ms; 049 iters.] [0.0000e+0 err.] pagerankStatic
+[00254.584 ms; 002 iters.] [2.0129e-6 err.] pagerankDynamic
+[00253.247 ms; 002 iters.] [1.9810e-6 err.] pagerankDynamic [skip-comp]
 
 # Batch size 1e+2
-[03844.255 ms; 044 iters.] [0.0000e+0 err.] pagerankMonolithic [static]
-[02107.710 ms; 049 iters.] [3.9819e-6 err.] pagerankLevelwise [static]
-[00262.562 ms; 003 iters.] [4.5857e-6 err.] pagerankLevelwise [dynamic]
+[02442.940 ms; 049 iters.] [0.0000e+0 err.] pagerankStatic
+[00301.574 ms; 003 iters.] [2.4152e-6 err.] pagerankDynamic
+[00299.359 ms; 003 iters.] [2.3857e-6 err.] pagerankDynamic [skip-comp]
 
 # Batch size 5e+2
-[03774.800 ms; 044 iters.] [0.0000e+0 err.] pagerankMonolithic [static]
-[02070.990 ms; 049 iters.] [3.9792e-6 err.] pagerankLevelwise [static]
-[00379.282 ms; 005 iters.] [4.9178e-6 err.] pagerankLevelwise [dynamic]
+[02432.011 ms; 049 iters.] [0.0000e+0 err.] pagerankStatic
+[00435.612 ms; 005 iters.] [3.6108e-6 err.] pagerankDynamic
+[00439.719 ms; 005 iters.] [3.5922e-6 err.] pagerankDynamic [skip-comp]
 
 # Batch size 1e+3
-[04266.784 ms; 044 iters.] [0.0000e+0 err.] pagerankMonolithic [static]
-[02268.871 ms; 049 iters.] [3.9950e-6 err.] pagerankLevelwise [static]
-[00486.638 ms; 006 iters.] [5.0327e-6 err.] pagerankLevelwise [dynamic]
+[02546.070 ms; 049 iters.] [0.0000e+0 err.] pagerankStatic
+[00534.300 ms; 007 iters.] [4.0567e-6 err.] pagerankDynamic
+[00530.003 ms; 006 iters.] [4.0360e-6 err.] pagerankDynamic [skip-comp]
 
 # Batch size 5e+3
-[04689.506 ms; 044 iters.] [0.0000e+0 err.] pagerankMonolithic [static]
-[02436.644 ms; 049 iters.] [3.9832e-6 err.] pagerankLevelwise [static]
-[00806.018 ms; 011 iters.] [4.9621e-6 err.] pagerankLevelwise [dynamic]
+[02454.957 ms; 049 iters.] [0.0000e+0 err.] pagerankStatic
+[00795.388 ms; 012 iters.] [4.5533e-6 err.] pagerankDynamic
+[00798.701 ms; 011 iters.] [4.5399e-6 err.] pagerankDynamic [skip-comp]
 
 # Batch size 1e+4
-[04274.704 ms; 044 iters.] [0.0000e+0 err.] pagerankMonolithic [static]
-[02297.683 ms; 049 iters.] [3.9969e-6 err.] pagerankLevelwise [static]
-[00916.021 ms; 014 iters.] [4.9902e-6 err.] pagerankLevelwise [dynamic]
+[02678.003 ms; 049 iters.] [0.0000e+0 err.] pagerankStatic
+[01042.808 ms; 014 iters.] [4.5984e-6 err.] pagerankDynamic
+[01045.956 ms; 014 iters.] [4.5913e-6 err.] pagerankDynamic [skip-comp]
 
 # Batch size 5e+4
-[04687.937 ms; 044 iters.] [0.0000e+0 err.] pagerankMonolithic [static]
-[02440.569 ms; 049 iters.] [3.9902e-6 err.] pagerankLevelwise [static]
-[01407.113 ms; 021 iters.] [4.9240e-6 err.] pagerankLevelwise [dynamic]
+[02853.757 ms; 049 iters.] [0.0000e+0 err.] pagerankStatic
+[01632.881 ms; 021 iters.] [4.6485e-6 err.] pagerankDynamic
+[01627.506 ms; 021 iters.] [4.6454e-6 err.] pagerankDynamic [skip-comp]
 
 # Batch size 1e+5
-[04539.768 ms; 044 iters.] [0.0000e+0 err.] pagerankMonolithic [static]
-[02403.685 ms; 049 iters.] [3.9363e-6 err.] pagerankLevelwise [static]
-[01566.698 ms; 024 iters.] [4.8300e-6 err.] pagerankLevelwise [dynamic]
+[02810.581 ms; 049 iters.] [0.0000e+0 err.] pagerankStatic
+[01844.752 ms; 024 iters.] [4.6653e-6 err.] pagerankDynamic
+[01849.970 ms; 024 iters.] [4.6565e-6 err.] pagerankDynamic [skip-comp]
 
 # Batch size 5e+5
-[04467.654 ms; 044 iters.] [0.0000e+0 err.] pagerankMonolithic [static]
-[02360.843 ms; 049 iters.] [3.9984e-6 err.] pagerankLevelwise [static]
-[01955.227 ms; 031 iters.] [4.6541e-6 err.] pagerankLevelwise [dynamic]
+[02960.564 ms; 049 iters.] [0.0000e+0 err.] pagerankStatic
+[02450.280 ms; 031 iters.] [4.4982e-6 err.] pagerankDynamic
+[02456.433 ms; 031 iters.] [4.4951e-6 err.] pagerankDynamic [skip-comp]
