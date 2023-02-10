@@ -10,7 +10,7 @@ component has been altered. From the 3 examples taken, it appears that
 be incorrect because my original component equality check simply compared the
 vertices, and not the edges.
 
-All outputs are saved in [out](out/) and a small part of the output is listed
+All outputs are saved in [gist] and a small part of the output is listed
 here. Input graphs are in [data](data/), with [drawings](drawings/). This
 experiment was done with guidance from [Prof. Dip Sankar Banerjee] and
 [Prof. Kishore Kothapalli].
@@ -67,7 +67,8 @@ $ ./a.out data/min2c1l.txt 5 2 true
 [Prof. Dip Sankar Banerjee]: https://sites.google.com/site/dipsankarban/
 [Prof. Kishore Kothapalli]: https://cstar.iiit.ac.in/~kkishore/
 [STIC-D algorithm]: https://www.slideshare.net/SubhajitSahu/sticd-algorithmic-techniques-for-efficient-parallel-pagerank-computation-on-realworld-graphs
-[levelwise]: https://github.com/puzzlef/pagerank-monolithic-vs-levelwise
-[pull]: https://github.com/puzzlef/pagerank-push-vs-pull
-[CSR]: https://github.com/puzzlef/pagerank-class-vs-csr
-[scaled-fill]: https://github.com/puzzlef/pagerank-dynamic-adjust-ranks
+[levelwise]: https://github.com/puzzlef/pagerank-levelwise
+[pull]: https://github.com/puzzlef/pagerank
+[CSR]: https://github.com/puzzlef/pagerank
+[scaled-fill]: https://github.com/puzzlef/pagerank-dynamic
+[gist]: https://gist.github.com/wolfram77/4dd5e8aafa094072c8a59a8fb3c85a55
