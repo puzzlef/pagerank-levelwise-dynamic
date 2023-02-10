@@ -13,7 +13,7 @@ the [STIC-D algorithm], without **ICD** optimizations (using single-thread).
 On average, **skipping unchanged components** is **barely faster** than not
 skipping.
 
-All outputs are saved in [out](out/) and a small part of the output is listed
+All outputs are saved in [gist] and a small part of the output is listed
 here. Some [charts] are also included below, generated from [sheets]. The input
 data used for this experiment is available at the
 [Stanford Large Network Dataset Collection]. This experiment was done with
@@ -129,11 +129,12 @@ $ ...
 [Prof. Kishore Kothapalli]: https://cstar.iiit.ac.in/~kkishore/
 [STIC-D algorithm]: https://www.slideshare.net/SubhajitSahu/sticd-algorithmic-techniques-for-efficient-parallel-pagerank-computation-on-realworld-graphs
 [Stanford Large Network Dataset Collection]: http://snap.stanford.edu/data/index.html
-[levelwise]: https://github.com/puzzlef/pagerank-monolithic-vs-levelwise
-[pull]: https://github.com/puzzlef/pagerank-push-vs-pull
-[CSR]: https://github.com/puzzlef/pagerank-class-vs-csr
-[comp-50]: https://github.com/puzzlef/pagerank-levelwise-adjust-component-size
-[scaled-fill]: https://github.com/puzzlef/pagerank-dynamic-adjust-ranks
-[skip-comp]: https://github.com/puzzlef/pagerank-levelwise-dynamic-validate-skip-unchanged-components
+[levelwise]: https://github.com/puzzlef/pagerank-levelwise
+[pull]: https://github.com/puzzlef/pagerank
+[CSR]: https://github.com/puzzlef/pagerank
+[comp-50]: https://github.com/puzzlef/pagerank-levelwise
+[scaled-fill]: https://github.com/puzzlef/pagerank-dynamic
+[skip-comp]: https://github.com/puzzlef/pagerank-levelwise-dynamic
+[gist]: https://gist.github.com/wolfram77/6c386eb6a26cd1c8fa8102066fbf60d4
 [charts]: https://photos.app.goo.gl/1KP6XUnptc78S3bo7
 [sheets]: https://docs.google.com/spreadsheets/d/1TBWQkhiI2NZwO5eBAK7qdJ1jafDMiU332fqOVS4V8NM/edit?usp=sharing
