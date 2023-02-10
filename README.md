@@ -15,7 +15,7 @@ approach to get a good time measure. **Levelwise** pagerank is the
 Indeed, **dynamic levelwise** pagerank is **faster** than the *static* approach
 for many batch sizes.
 
-All outputs are saved in [out](out/) and a small part of the output is listed
+All outputs are saved in [gist] and a small part of the output is listed
 here. Some [charts] are also included below, generated from [sheets]. The input
 data used for this experiment is available at ["graphs"] (for small ones), and
 the [SuiteSparse Matrix Collection]. For previous experiments, see [branches].
@@ -159,14 +159,15 @@ $ ...
 [STIC-D algorithm]: https://www.slideshare.net/SubhajitSahu/sticd-algorithmic-techniques-for-efficient-parallel-pagerank-computation-on-realworld-graphs
 [SuiteSparse Matrix Collection]: https://suitesparse-collection-website.herokuapp.com
 ["graphs"]: https://github.com/puzzlef/graphs
-[monolithic]: https://github.com/puzzlef/pagerank-monolithic-vs-levelwise
-[levelwise]: https://github.com/puzzlef/pagerank-monolithic-vs-levelwise
-[pull]: https://github.com/puzzlef/pagerank-push-vs-pull
-[CSR]: https://github.com/puzzlef/pagerank-class-vs-csr
-[skip-teleport]: https://github.com/puzzlef/pagerank-levelwise-skip-teleport
-[compute-10]: https://github.com/puzzlef/pagerank-levelwise-adjust-compute-size
-[skip-comp]: https://github.com/puzzlef/pagerank-levelwise-dynamic-validate-skip-unchanged-components
-[scaled-fill]: https://github.com/puzzlef/pagerank-dynamic-adjust-ranks
-[branches]: https://github.com/puzzlef/pagerank-levelwise-static-vs-dynamic-with-mtx-insertions/branches
+[monolithic]: https://github.com/puzzlef/pagerank-levelwise
+[levelwise]: https://github.com/puzzlef/pagerank-levelwise
+[pull]: https://github.com/puzzlef/pagerank
+[CSR]: https://github.com/puzzlef/pagerank
+[skip-teleport]: https://github.com/puzzlef/pagerank-levelwise
+[compute-10]: https://github.com/puzzlef/pagerank-levelwise
+[skip-comp]: https://github.com/puzzlef/pagerank-levelwise-dynamic
+[scaled-fill]: https://github.com/puzzlef/pagerank-dynamic
+[branches]: https://github.com/puzzlef/pagerank-levelwise-dynamic/branches
+[gist]: https://gist.github.com/wolfram77/b78e00855f48b5c7e210254742128954
 [charts]: https://photos.app.goo.gl/29GpUSZEjPBtZkfq6
 [sheets]: https://docs.google.com/spreadsheets/d/13-ijfokEXlpX3r5bRNOWg_8mPvomNilF8Yyy4KYOj-s/edit?usp=sharing
