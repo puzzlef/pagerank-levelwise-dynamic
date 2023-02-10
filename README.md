@@ -14,7 +14,7 @@ approach to get a good time measure. **Levelwise** pagerank is the
 On average, **skipping unchanged components** is **barely faster** than not
 skipping.
 
-All outputs are saved in [out](out/) and a small part of the output is listed
+All outputs are saved in [gist] and a small part of the output is listed
 here. Some [charts] are also included below, generated from [sheets]. The input
 data used for this experiment is available at ["graphs"] (for small ones), and
 the [SuiteSparse Matrix Collection]. This experiment was done with guidance
@@ -126,11 +126,12 @@ $ ...
 [STIC-D algorithm]: https://www.slideshare.net/SubhajitSahu/sticd-algorithmic-techniques-for-efficient-parallel-pagerank-computation-on-realworld-graphs
 [SuiteSparse Matrix Collection]: https://suitesparse-collection-website.herokuapp.com
 ["graphs"]: https://github.com/puzzlef/graphs
-[levelwise]: https://github.com/puzzlef/pagerank-monolithic-vs-levelwise
-[pull]: https://github.com/puzzlef/pagerank-push-vs-pull
-[CSR]: https://github.com/puzzlef/pagerank-class-vs-csr
-[comp-50]: https://github.com/puzzlef/pagerank-levelwise-adjust-component-size
-[skip-comp]: https://github.com/puzzlef/pagerank-levelwise-dynamic-validate-skip-unchanged-components
-[scaled-fill]: https://github.com/puzzlef/pagerank-dynamic-adjust-ranks
+[levelwise]: https://github.com/puzzlef/pagerank-levelwise
+[pull]: https://github.com/puzzlef/pagerank
+[CSR]: https://github.com/puzzlef/pagerank
+[comp-50]: https://github.com/puzzlef/pagerank-levelwise
+[skip-comp]: https://github.com/puzzlef/pagerank-levelwise-dynamic
+[scaled-fill]: https://github.com/puzzlef/pagerank-dynamic
+[gist]: https://gist.github.com/wolfram77/0c25e6a24a6d69779b462b2062d02453
 [charts]: https://photos.app.goo.gl/BVK4d6NiwgFdpG718
 [sheets]: https://docs.google.com/spreadsheets/d/1u2V3eIblQk9DkNK3NXlCpSaGI5vEkFUaFI_hOOyybxg/edit?usp=sharing
